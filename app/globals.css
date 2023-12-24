@@ -11,3 +11,9 @@
     background-size: cover;
     background-position: center;
 }
+
+.bg-splash2 {
+    background-image: url("/images/Splash2.jpg");
+    background-size: cover;
+    background-position: center;
+}
