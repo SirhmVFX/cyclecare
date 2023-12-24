@@ -1,11 +1,15 @@
+import Image from "next/image";
 import Link from "next/link";
 
-function Splash1() {
+function Splash2() {
   return (
     <>
-      <section className="bg-splash2 w-full h-screen flex flex-col justify-between items-start">
-        <div className="p-12 flex flex-col gap-8 items-start justify-between bg-gradient-to-t from-secondary to-transparent h-screen ">
-          <Link className="bg-white rounded-full" href="/splash2">
+      <section className="w-full h-screen">
+        <div className="w-full bg-black h-[510px] relative">
+          <Link
+            className="bg-white rounded-full absolute left-12 top-12"
+            href="/splash1"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -23,25 +27,31 @@ function Splash1() {
               />
             </svg>
           </Link>
+          <Image
+            src="/images/Splash3.png"
+            alt="splash3"
+            width={1000}
+            height={1000}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-          <div className="flex flex-col items-start gap-8">
-            <div className="p-4 bg-accent text-white rounded-2xl">
-              <p className="text-sm">Why CycleCare</p>
-            </div>
-
-            <h1 className="text-2xl font-bold leading-6 text-white">
-              Empower your journey with our period-tracking app—Your
-              personalized companion for seamless cycle care and well-being!
-            </h1>
-
-            <Link href="/accounttype" className="button bg-accent">
-              Create an Account
-            </Link>
+        <div className="flex flex-col items-start gap-8 p-12">
+          <div className="py-3 px-4 bg-accent text-white rounded-2xl">
+            <p className="text-sm">Why CycleCare</p>
           </div>
+
+          <h1 className="text-2xl font-bold leading-6 text-secondary">
+            Your personalized companion for seamless cycle care and well-being!
+          </h1>
+
+          <Link href="/splash3" className="button bg-accent">
+            Next
+          </Link>
         </div>
       </section>
     </>
   );
 }
 
-export default Splash1;
+export default Splash2;
