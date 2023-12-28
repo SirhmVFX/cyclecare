@@ -1,7 +1,7 @@
-const Button = ({ label }) => {
+const Button = ({ label, color }) => {
   return (
     <>
-      <button className="button bg-secondary">{label}</button>
+      <button className={`${color} button`}>{label}</button>
     </>
   );
 };

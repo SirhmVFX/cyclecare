@@ -1,7 +1,10 @@
+import Link from "next/link";
+import Button from "../components/Button";
+
 function UserSignUp() {
   return (
     <>
-      <section className="w-full md:w-2/4 mx-auto h-screen p-12">
+      <section className="w-full md:w-2/4 mx-auto h-screen p-8">
         <div className=" flex flex-col items-center py-4">
           <h1 className="font-bold text-2xl">Sign up</h1>
           <p>Enter your details below to get started</p>
@@ -9,8 +12,8 @@ function UserSignUp() {
 
         <form>
           <div>
-            <label htmlFor="" className="text-sm">
-              First Name
+            <label htmlFor="" className="text-sm" aria-required>
+              First Name *
             </label>
 
             <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
@@ -41,10 +44,9 @@ function UserSignUp() {
               />
             </div>
           </div>
-
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
-              Last Name
+              Last Name *
             </label>
 
             <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
@@ -75,10 +77,9 @@ function UserSignUp() {
               />
             </div>
           </div>
-
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
-              Email Address
+              Email Address *
             </label>
 
             <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
@@ -107,10 +108,9 @@ function UserSignUp() {
               />
             </div>
           </div>
-
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
-              Phone
+              Phone *
             </label>
 
             <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
@@ -133,10 +133,9 @@ function UserSignUp() {
               />
             </div>
           </div>
-
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
-              Password
+              Password *
             </label>
 
             <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
@@ -167,10 +166,9 @@ function UserSignUp() {
               />
             </div>
           </div>
-
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
-              Confirm Password
+              Confirm Password *
             </label>
 
             <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
@@ -201,7 +199,17 @@ function UserSignUp() {
               />
             </div>
           </div>
+          <div className="mt-8">
+            <Button color={"bg-accent"} label={"Create Account"} />
+          </div>
         </form>
+
+        <div className="flex justify-center p-4 gap-2">
+          <h1 className="font-bold">Already have an account?</h1>
+          <Link href="/usersignin" className="font-bold text-accent">
+            LOGIN
+          </Link>
+        </div>
       </section>
     </>
   );
