@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Button from "../components/Button";
+import Button from "../../components/Button";
 import { useRouter } from "next/navigation";
 
 function ForgotPassword() {
