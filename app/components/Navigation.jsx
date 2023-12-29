@@ -72,7 +72,7 @@ function Navigation() {
           Upload
         </Link>
         <Link
-          href={`/`}
+          href={`/profile/account`}
           className="flex flex-col items-center text-white text-sm"
         >
           <svg

@@ -1,3 +1,4 @@
+import Toast from "@/app/components/Toast";
 import Image from "next/image";
 
 function Userprofile({ params }) {
