@@ -3,7 +3,7 @@ import Link from "next/link";
 function Navigation() {
   return (
     <>
-      <section className="absolute bottom-0 bg-secondary w-full p-8 flex gap-14 justify-center">
+      <section className="fixed bottom-0 bg-secondary w-full p-8 flex gap-14 justify-center ">
         <Link
           href={`/`}
           className="flex flex-col items-center text-accent text-sm"
