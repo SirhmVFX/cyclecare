@@ -4,7 +4,7 @@ import Link from "next/link";
 function Account() {
   return (
     <>
-      <section className="w-full md:w-2/4 bg-secondary h-screen flex items-end">
+      <section className="w-full md:w-2/4 mx-auto bg-secondary h-screen flex items-end">
         <div className="bg-white w-full h-3/4 p-12 relative rounded-s-2xl rounded-e-2xl">
           <div className="absolute -top-10 w-3/4 mx-auto flex flex-col items-center">
             <Image
