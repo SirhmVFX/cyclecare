@@ -97,6 +97,12 @@ function Navigation() {
           </svg>
           Profile
         </Link>
+
+        <div>
+          <div>
+            <p>Chat with cyclecare AI Assitant</p>
+          </div>
+        </div>
       </section>
     </>
   );
