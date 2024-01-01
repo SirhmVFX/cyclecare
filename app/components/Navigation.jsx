@@ -99,11 +99,11 @@ function Navigation() {
         </Link>
 
         <div className="flex gap-3 absolute -top-8 right-7 items-center">
-          <div className="py-3 px-8 bg-white rounded-3xl">
+          <div className="py-3 px-8 bg-white rounded-3xl shadow-lg">
             <p className="text-sm text-gray-300">CycleCare AI Assitant</p>
           </div>
 
-          <div className="p-4 bg-accent rounded-full">
+          <div className="p-4 bg-accent rounded-full shadow-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="17"
