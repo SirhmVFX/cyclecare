@@ -52,6 +52,15 @@ function Discover() {
             </div>
           </div>
         </div>
+
+        <div className="bg-gray-300 rounded-xl">
+          <div className="dicover">
+            <div>
+              <h1 className="font-bold text-white">Cycle Care</h1>
+              <h1>Self Care Routine</h1>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
