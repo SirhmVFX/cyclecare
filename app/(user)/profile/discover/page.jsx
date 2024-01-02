@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function Discover() {
   return (
     <>
@@ -53,12 +55,24 @@ function Discover() {
           </div>
         </div>
 
-        <div className="bg-gray-300 rounded-xl">
-          <div className="dicover">
+        <div className="bg-gray-300 rounded-xl my-4">
+          <div className="discover p-8 w-full">
+            <div className="bg-secondary w-full h-full"></div>
             <div>
               <h1 className="font-bold text-white">Cycle Care</h1>
               <h1>Self Care Routine</h1>
             </div>
+
+            <div>
+              <Image
+                src="/images/Splash1.jpg"
+                width={50}
+                height={50}
+                className="rounded-full border-2 border-white"
+              />
+            </div>
+
+            <p className="text-white">Your daily Selfcare Check ups</p>
           </div>
         </div>
       </section>
