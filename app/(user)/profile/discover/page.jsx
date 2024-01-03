@@ -63,12 +63,36 @@ function Discover() {
               <h1>Self Care Routine</h1>
             </div>
 
-            <div>
+            <div className="flex relative">
               <Image
-                src="/images/Splash1.jpg"
-                width={50}
-                height={50}
-                className="rounded-full border-2 border-white"
+                src="/images/people.png"
+                width={35}
+                height={35}
+                className="rounded-full border-2 border-white "
+              />
+              <Image
+                src="/images/people.png"
+                width={35}
+                height={35}
+                className="rounded-full border-2 border-white absolute left-5"
+              />
+              <Image
+                src="/images/people.png"
+                width={35}
+                height={35}
+                className="rounded-full border-2 border-white absolute left-10"
+              />
+              <Image
+                src="/images/people.png"
+                width={35}
+                height={35}
+                className="rounded-full border-2 border-white absolute left-16"
+              />
+              <Image
+                src="/images/people.png"
+                width={35}
+                height={35}
+                className="rounded-full border-2 border-white absolute left-20"
               />
             </div>
 
