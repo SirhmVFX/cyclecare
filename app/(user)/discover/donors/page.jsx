@@ -3,7 +3,18 @@ function Donors() {
   return (
     <>
       <section className="w-full md:w-2/4 mx-auto h-screen relative">
-        <div className="bg-white w-full rounded-ss-3xl rounded-se-3xl p-12 h-3/4 absolute bottom-0">
+        <div className="w-full h-[300px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126834.05801193304!2d3.3488896!3d6.5765376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sen!2sng!4v1704388854964!5m2!1sen!2sng"
+            width=""
+            height=""
+            className="border-0 w-full h-full"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div className="bg-white w-full rounded-ss-3xl rounded-se-3xl px-12 pt-12 h-2/3 absolute bottom-0">
           <div className="flex justify-between">
             <div>
               <h1 className="text-lg font-bold">Discover</h1>
