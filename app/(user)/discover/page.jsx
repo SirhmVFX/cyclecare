@@ -179,7 +179,7 @@ function Discover() {
           <div className="flex justify-between">
             <h1 className="font-bold"> Donors</h1>
 
-            <Link href="/donors" className="text-sm text-gray-300">
+            <Link href="/discover/donors" className="text-sm text-gray-300">
               See More
             </Link>
           </div>
