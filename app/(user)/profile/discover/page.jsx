@@ -4,7 +4,7 @@ import Link from "next/link";
 function Discover() {
   return (
     <>
-      <section className="w-full md:w-2/4 mx-auto p-8 h-screen ">
+      <section className="w-full md:w-2/4 mx-auto px-8 pt-8 h-screen pb-32">
         <div className="flex justify-between">
           <div>
             <p className="font-bold text-gray-300">Good Morning</p>
@@ -235,6 +235,108 @@ function Discover() {
                   <p className="text-sm text-gray-300">| Ojodu, Lagos State</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-4 pb-32">
+          <h1 className="font-bold">Top Products</h1>
+
+          <div className="flex gap-4">
+            <div className="bg-white shadow-lg p-4 w-1/3 rounded-2xl ">
+              <Image
+                src="/images/prod.jpeg"
+                width={80}
+                height={80}
+                alt="prod"
+              />
+              <h1 className="text-sm font-bold">Whisper Sanitary Pad</h1>
+              <div className="flex relative">
+                <Image
+                  src="/images/people.png"
+                  width={35}
+                  height={35}
+                  className="rounded-full border-2 border-white "
+                />
+                <Image
+                  src="/images/people (1).png"
+                  width={35}
+                  height={35}
+                  className="rounded-full border-2 border-white absolute left-5"
+                />
+                <Image
+                  src="/images/people (2).png"
+                  width={35}
+                  height={35}
+                  className="rounded-full border-2 border-white absolute left-10"
+                />
+              </div>
+
+              <p className="text-sm text-gray-300">24 items left</p>
+            </div>
+
+            <div className="bg-white shadow-lg p-4 w-1/3 rounded-2xl ">
+              <Image
+                src="/images/prod.jpeg"
+                width={80}
+                height={80}
+                alt="prod"
+              />
+              <h1 className="text-sm font-bold">Whisper Sanitary Pad</h1>
+              <div className="flex relative">
+                <Image
+                  src="/images/people.png"
+                  width={35}
+                  height={35}
+                  className="rounded-full border-2 border-white "
+                />
+                <Image
+                  src="/images/people (1).png"
+                  width={35}
+                  height={35}
+                  className="rounded-full border-2 border-white absolute left-5"
+                />
+                <Image
+                  src="/images/people (2).png"
+                  width={35}
+                  height={35}
+                  className="rounded-full border-2 border-white absolute left-10"
+                />
+              </div>
+
+              <p className="text-sm text-gray-300">24 items left</p>
+            </div>
+
+            <div className="bg-white shadow-lg p-4 w-1/3 rounded-2xl ">
+              <Image
+                src="/images/prod.jpeg"
+                width={80}
+                height={80}
+                alt="prod"
+              />
+              <h1 className="text-sm font-bold">Whisper Sanitary Pad</h1>
+              <div className="flex relative">
+                <Image
+                  src="/images/people.png"
+                  width={35}
+                  height={35}
+                  className="rounded-full border-2 border-white "
+                />
+                <Image
+                  src="/images/people (1).png"
+                  width={35}
+                  height={35}
+                  className="rounded-full border-2 border-white absolute left-5"
+                />
+                <Image
+                  src="/images/people (2).png"
+                  width={35}
+                  height={35}
+                  className="rounded-full border-2 border-white absolute left-10"
+                />
+              </div>
+
+              <p className="text-sm text-gray-300">24 items left</p>
             </div>
           </div>
         </div>
