@@ -36,7 +36,7 @@ function AccountType() {
         />
 
         <div className="bg-white w-full md:w-2/4 absolute bottom-0 h-2/4 rounded-ss-[62px] rounded-se-[62px] flex gap-8 justify-center items-center">
-          <button>
+          <Link href={"/usersignin"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="60"
@@ -66,7 +66,7 @@ function AccountType() {
               />
             </svg>
             As a User
-          </button>
+          </Link>
 
           <button>
             <svg
