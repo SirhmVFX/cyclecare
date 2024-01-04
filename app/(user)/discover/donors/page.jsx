@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 function Donors() {
   return (
     <>
@@ -30,23 +31,29 @@ function Donors() {
             </div>
           </div>
           <div>
-            <div className="flex items-center gap-4 py-2">
-              <Image
-                src="/images/donor1.png"
-                width={80}
-                height={80}
-                alt="donor"
-                className="rounded-3xl"
-              />
+            <Link href={`/discover/donors/123`}>
+              <div className="flex items-center gap-4 py-2">
+                <Image
+                  src="/images/donor1.png"
+                  width={80}
+                  height={80}
+                  alt="donor"
+                  className="rounded-3xl"
+                />
 
-              <div>
-                <h1 className="font-bold">Darlene Robertson</h1>
-                <div className="flex gap-2">
-                  <p className="text-sm text-accent font-bold">Sanitary Pads</p>
-                  <p className="text-sm text-gray-300">| Ojodu, Lagos State</p>
+                <div>
+                  <h1 className="font-bold">Darlene Robertson</h1>
+                  <div className="flex gap-2">
+                    <p className="text-sm text-accent font-bold">
+                      Sanitary Pads
+                    </p>
+                    <p className="text-sm text-gray-300">
+                      | Ojodu, Lagos State
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
             <div className="flex items-center gap-4 py-2">
               <Image
                 src="/images/donor (1).png"
@@ -81,7 +88,7 @@ function Donors() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-4 py-2">
+            <div className="flex items-center gap-4 pt-2 pb-32 ">
               <Image
                 src="/images/donor (2).png"
                 width={80}
