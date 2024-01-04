@@ -164,7 +164,7 @@ function DonorsId() {
               </div>
             </div>
             <div className="w-full h-[2px] bg-slate-200">.</div>
-            <div className="">
+            <div className="flex items-center justify-center">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
