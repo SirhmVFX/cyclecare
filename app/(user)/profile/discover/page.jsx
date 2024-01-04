@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function Discover() {
   return (
@@ -171,6 +172,16 @@ function Discover() {
 
               <p>4.0</p>
             </div>
+          </div>
+        </div>
+
+        <div>
+          <div className="flex justify-between">
+            <h1 className="font-bold"> Donors</h1>
+
+            <Link href="/donors" className="text-sm text-gray-300">
+              See More
+            </Link>
           </div>
         </div>
       </section>
