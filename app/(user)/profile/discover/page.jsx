@@ -74,25 +74,25 @@ function Discover() {
                 className="rounded-full border-2 border-white "
               />
               <Image
-                src="/images/people.png"
+                src="/images/people (1).png"
                 width={35}
                 height={35}
                 className="rounded-full border-2 border-white absolute left-5"
               />
               <Image
-                src="/images/people.png"
+                src="/images/people (2).png"
                 width={35}
                 height={35}
                 className="rounded-full border-2 border-white absolute left-10"
               />
               <Image
-                src="/images/people.png"
+                src="/images/people (3).png"
                 width={35}
                 height={35}
                 className="rounded-full border-2 border-white absolute left-16"
               />
               <Image
-                src="/images/people.png"
+                src="/images/people (4).png"
                 width={35}
                 height={35}
                 className="rounded-full border-2 border-white absolute left-20"
@@ -204,7 +204,7 @@ function Discover() {
             </div>
             <div className="flex items-center gap-4 py-2">
               <Image
-                src="/images/donor1.png"
+                src="/images/donor (1).png"
                 width={80}
                 height={80}
                 alt="donor"
@@ -221,7 +221,7 @@ function Discover() {
             </div>
             <div className="flex items-center gap-4 py-2">
               <Image
-                src="/images/donor1.png"
+                src="/images/donor (2).png"
                 width={80}
                 height={80}
                 alt="donor"
