@@ -1,3 +1,4 @@
+import ChatBubble from "@/app/components/ChatBubble";
 import Image from "next/image";
 
 function Message() {
@@ -31,6 +32,10 @@ function Message() {
               />
             </svg>
           </div>
+        </div>
+
+        <div className="py-4">
+          <ChatBubble />
         </div>
       </section>
     </>
