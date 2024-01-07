@@ -1,4 +1,5 @@
 import ChatBubble from "@/app/components/ChatBubble";
+import ChatBubbleReceive from "@/app/components/ChatBubbleReceive";
 import Image from "next/image";
 
 function Message() {
@@ -35,7 +36,14 @@ function Message() {
         </div>
 
         <div className="py-4">
-          <ChatBubble />
+          <ul>
+            <li>
+              <ChatBubble />
+            </li>
+            <li>
+              <ChatBubbleReceive />
+            </li>
+          </ul>
         </div>
       </section>
     </>
