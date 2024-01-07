@@ -1,4 +1,4 @@
-function ChatBubble() {
+function ChatBubbleReceive() {
   return (
     <>
       <div className="bg-accent py-2 px-4 rounded-2xl rounded-ee-none w-fit float-end">
@@ -7,5 +7,4 @@ function ChatBubble() {
     </>
   );
 }
-
-export default ChatBubble;
+export default ChatBubbleReceive;
