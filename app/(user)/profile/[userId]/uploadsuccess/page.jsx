@@ -23,6 +23,9 @@ function UploadSuccess() {
         </svg>
 
         <p className="text-white font-bold">Upload Successful!</p>
+        <div className="mt-8">
+          <Button color={"bg-secondary"} label={"Back to Home"} />
+        </div>
       </section>
     </>
   );
