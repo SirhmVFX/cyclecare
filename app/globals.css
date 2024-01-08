@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .button {
-    @apply p-4 w-full rounded-2xl text-white max-w-96 text-center
+    @apply p-4 w-full rounded-2xl text-white text-center
 }
 
 .bg-splash1 {
