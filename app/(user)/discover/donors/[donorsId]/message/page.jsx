@@ -5,7 +5,7 @@ import Image from "next/image";
 function Message() {
   return (
     <>
-      <section className="w-full md:w-2/4 mx-auto p-8">
+      <section className="w-full md:w-2/4 mx-auto p-8 h-screen">
         <div className="flex justify-between">
           <div className="flex justify-center items-center gap-3">
             <Image
@@ -35,15 +35,29 @@ function Message() {
           </div>
         </div>
 
-        <div className="py-4">
+        <div className="py-4 h-[85%]">
           <ul>
-            <li>
+            <li className="flex justify-end">
               <ChatBubble />
             </li>
             <li>
               <ChatBubbleReceive />
             </li>
           </ul>
+        </div>
+
+        <div className="flex gap-3 justify-center">
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Enter message"
+            className="border p-2 rounded-2xl w-3/4"
+          />
+
+          <button className="bg-accent py-2 px-3 text-white rounded-2xl">
+            Send
+          </button>
         </div>
       </section>
     </>
