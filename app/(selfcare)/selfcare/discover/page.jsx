@@ -18,7 +18,7 @@ function SelfcareDiscover() {
           />
         </div>
 
-        <div className="">
+        <div className="p-6 my-8 border border-gray-200 rounded-2xl flex items-center gap-3">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,11 @@ function SelfcareDiscover() {
             </svg>
           </div>
 
-          <input type="text" />
+          <input
+            type="text"
+            placeholder="search"
+            className="w-full outline-none"
+          />
         </div>
       </section>
     </>
