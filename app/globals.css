@@ -24,3 +24,9 @@
     background-position: center;
     
 }
+
+.selfcare {
+    background-image: url("/images/selfcare.jpeg");
+    background-size: cover;
+    background-position: center;
+}
