@@ -5,7 +5,7 @@ function SelfCare() {
     <>
       <section className="selfcare relative w-full h-screen">
         <div className="absolute bottom-0 w-full p-12 bg-gradient-to-t from-black to-transparent h-2/4">
-          <div className="text-white w-full flex flex-col ">
+          <div className="text-white w-full flex flex-col justify-end h-full">
             <h1 className="font-bold text-6xl">
               Stay Fit <br /> & Strong
             </h1>
