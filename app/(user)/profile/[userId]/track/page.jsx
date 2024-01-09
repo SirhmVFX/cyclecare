@@ -1,4 +1,6 @@
+import Button from "@/app/components/Button";
 import Image from "next/image";
+import Link from "next/link";
 
 function TrackCycle() {
   return (
@@ -239,6 +241,7 @@ function TrackCycle() {
               </div>
             </div>
           </div>
+
           <div className="flex items-center gap-8 mb-3">
             <input type="checkbox" name="" id="" />
 
@@ -257,6 +260,15 @@ function TrackCycle() {
             </div>
           </div>
 
+          <div className="mt-6 flex flex-col items-center">
+            <Button label={"Completed"} color={"bg-accent"} />
+            <Link
+              href={"/profile/user/doctorappoitment"}
+              className="text-sm text-accent"
+            >
+              Not Observing? Schedule a doctors appointment
+            </Link>
+          </div>
           <div className="pb-20">.</div>
         </div>
       </section>
