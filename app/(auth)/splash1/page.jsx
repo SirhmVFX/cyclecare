@@ -4,7 +4,7 @@ function Splash1() {
   return (
     <>
       <section className="bg-splash1 w-full h-screen flex flex-col justify-between items-start">
-        <div className="p-12 flex flex-col gap-8 items-start justify-between bg-gradient-to-t from-secondary to-transparent h-screen ">
+        <div className="p-12 flex flex-col gap-8 items-start justify-between bg-gradient-to-t from-secondary to-transparent h-screen w-full md:w-2/4 mx-auto">
           <Link className="bg-white rounded-full" href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"

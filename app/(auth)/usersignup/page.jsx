@@ -1,7 +1,36 @@
+"use client";
 import Link from "next/link";
 import Button from "../../components/Button";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+
+import { useState } from "react";
+import { auth } from "@/app/firebase/config";
+
+import { useRouter } from "next/navigation";
 
 function UserSignUp() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const router = useRouter();
+
+  const [createUserWithEmailAndPassword] =
+    useCreateUserWithEmailAndPassword(auth);
+
+  const handleSignIn = async (e) => {
+    try {
+      e.preventDefault();
+      const res = await createUserWithEmailAndPassword(email, password);
+      console.log({ res });
+      setEmail("");
+      setPassword("");
+      alert("User Created Successfully, Proceed to Sign Up");
+      router.push("/usersignin");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <section className="w-full md:w-2/4 mx-auto h-screen p-8">
@@ -10,7 +39,7 @@ function UserSignUp() {
           <p>Enter your details below to get started</p>
         </div>
 
-        <form>
+        <form onSubmit={handleSignIn}>
           <div>
             <label htmlFor="" className="text-sm" aria-required>
               First Name *
@@ -40,7 +69,7 @@ function UserSignUp() {
               <input
                 type="text"
                 placeholder="Enter your name"
-                className="bg-transparent w-full text-sm"
+                className="bg-transparent w-full text-sm outline-none"
               />
             </div>
           </div>
@@ -73,7 +102,7 @@ function UserSignUp() {
               <input
                 type="text"
                 placeholder="Enter your last name"
-                className="bg-transparent w-full text-sm"
+                className="bg-transparent w-full text-sm outline-none"
               />
             </div>
           </div>
@@ -104,7 +133,8 @@ function UserSignUp() {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="bg-transparent w-full text-sm"
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-transparent w-full text-sm outline-none"
               />
             </div>
           </div>
@@ -129,7 +159,7 @@ function UserSignUp() {
               <input
                 type="number"
                 placeholder="Enter your phone number"
-                className="bg-transparent w-full text-sm"
+                className="bg-transparent w-full text-sm outline-none"
               />
             </div>
           </div>
@@ -162,7 +192,8 @@ function UserSignUp() {
               <input
                 type="password"
                 placeholder="Create your password"
-                className="bg-transparent w-full text-sm"
+                className="bg-transparent w-full text-sm outline-none"
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
           </div>
@@ -195,12 +226,17 @@ function UserSignUp() {
               <input
                 type="password"
                 placeholder="Confirm your password"
-                className="bg-transparent w-full text-sm"
+                className="bg-transparent w-full text-sm outline-none"
               />
             </div>
           </div>
           <div className="mt-8">
-            <Button color={"bg-accent"} label={"Create Account"} />
+            <button
+              className="bg-accent p-4 w-full rounded-2xl text-white font-bold"
+              type="submit"
+            >
+              Create Account
+            </button>
           </div>
         </form>
 
