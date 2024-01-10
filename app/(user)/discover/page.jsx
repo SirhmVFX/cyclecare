@@ -1,14 +1,28 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "@/app/firebase/config";
+import { useRouter } from "next/navigation";
+
 function Discover() {
+  const [user] = useAuthState(auth);
+  const router = useRouter();
+  console.log({ user });
+
+  if (!user) {
+    router.push("/usersignin");
+  }
+
   return (
     <>
       <section className="w-full md:w-2/4 mx-auto px-8 pt-8 h-screen pb-32">
         <div className="flex justify-between">
           <div>
             <p className="font-bold text-gray-300">Good Morning</p>
-            <h1 className="font-bold text-2xl text-secondary">Ayomide</h1>
+            <h1 className="font-bold text-2xl text-secondary">{user?.email}</h1>
           </div>
 
           <div className="flex gap-2 items-center">
