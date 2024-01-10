@@ -1,7 +1,31 @@
+"use client";
+
 import Link from "next/link";
 import Button from "../../components/Button";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+
+import { useState } from "react";
+import { auth } from "@/app/firebase/config";
+import { useRouter } from "next/navigation";
 
 function UserSignIn() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [signInwithemailandpassword] = useSignInWithEmailAndPassword(auth);
+
+  const router = useRouter();
+  const handleSignIn = async (e) => {
+    try {
+      e.preventDefault();
+      const res = await signInwithemailandpassword(email, password);
+      console.log({ res });
+      setEmail("");
+      setPassword("");
+      router.push("/discover");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <section className="w-full md:w-2/4 mx-auto h-screen p-8">
@@ -10,7 +34,7 @@ function UserSignIn() {
           <p>Sign in to continue</p>
         </div>
 
-        <form>
+        <form onSubmit={handleSignIn}>
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
               Email Address *
@@ -38,7 +62,8 @@ function UserSignIn() {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="bg-transparent w-full text-sm"
+                className="bg-transparent w-full text-sm outline-none"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
@@ -72,7 +97,8 @@ function UserSignIn() {
               <input
                 type="password"
                 placeholder="Create your password"
-                className="bg-transparent w-full text-sm"
+                className="bg-transparent w-full text-sm outline-none"
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
           </div>
