@@ -7,13 +7,31 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@/app/firebase/config";
 import { useRouter } from "next/navigation";
 
+import { useEffect } from "react";
+
 function Discover() {
   const [user] = useAuthState(auth);
   const router = useRouter();
   console.log({ user });
 
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (!user && !storedUser) {
+      // No user in auth state or local storage, redirect to sign in
+      router.push("/usersignin");
+    }
+  }, [user, router]);
+
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem("user", JSON.stringify(user));
+    }
+  }, [user]);
+
+  // If user is not authenticated, return null (or any other message/component)
   if (!user) {
-    router.push("/usersignin");
+    return;
   }
 
   return (

@@ -22,6 +22,12 @@ function UserSignIn() {
       e.preventDefault();
       const res = await signInwithemailandpassword(email, password);
       console.log({ res });
+
+      localStorage.setItem("user", JSON.stringify(res.user));
+
+      setTimeout(() => {
+        localStorage.removeItem("user");
+      }, 20 * 60 * 60 * 1000);
       setEmail("");
       setPassword("");
       router.push("/discover");
