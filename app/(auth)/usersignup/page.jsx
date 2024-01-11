@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 function UserSignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [clicked, setClicked] = useState(false);
 
   const router = useRouter();
 
@@ -18,12 +19,14 @@ function UserSignUp() {
     useCreateUserWithEmailAndPassword(auth);
 
   const handleSignIn = async (e) => {
+    setClicked(true);
     try {
       e.preventDefault();
       const res = await createUserWithEmailAndPassword(email, password);
       console.log({ res });
       setEmail("");
       setPassword("");
+
       alert("User Created Successfully, Proceed to Sign Up");
       router.push("/usersignin");
     } catch (error) {
@@ -232,10 +235,12 @@ function UserSignUp() {
           </div>
           <div className="mt-8">
             <button
-              className="bg-accent p-4 w-full rounded-2xl text-white font-bold"
+              className={`${
+                clicked ? "bg-red-300" : "bg-accent"
+              } p-4 w-full rounded-2xl text-white font-bold`}
               type="submit"
             >
-              Create Account
+              {clicked ? "Please Wait..." : "Create Account"}
             </button>
           </div>
         </form>

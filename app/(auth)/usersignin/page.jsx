@@ -12,9 +12,12 @@ function UserSignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signInwithemailandpassword] = useSignInWithEmailAndPassword(auth);
+  const [clicked, setClicked] = useState(false);
 
   const router = useRouter();
+
   const handleSignIn = async (e) => {
+    setClicked(true);
     try {
       e.preventDefault();
       const res = await signInwithemailandpassword(email, password);
@@ -108,7 +111,10 @@ function UserSignIn() {
           </div>
 
           <div className="mt-8">
-            <Button color={"bg-accent"} label={"Sign In"} />
+            <Button
+              color={clicked ? "bg-red-300" : "bg-accent"}
+              label={clicked ? "Signing In..." : "Sign In"}
+            />
           </div>
         </form>
 
