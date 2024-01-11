@@ -49,7 +49,10 @@ function Discover() {
               </svg>
             </div>
 
-            <div className="bg-white rounded-2xl shadow-lg p-3">
+            <Link
+              href={"/linkdonors"}
+              className="bg-white rounded-2xl shadow-lg p-3"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -66,7 +69,7 @@ function Discover() {
                   fill="#202020"
                 />
               </svg>
-            </div>
+            </Link>
           </div>
         </div>
 
