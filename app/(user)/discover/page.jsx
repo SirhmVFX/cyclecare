@@ -44,7 +44,10 @@ function Discover() {
           </div>
 
           <div className="flex gap-2 items-center">
-            <div className="bg-white rounded-2xl shadow-lg p-3">
+            <Link
+              href={"/notifications"}
+              className="bg-white rounded-2xl shadow-lg p-3"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -65,7 +68,7 @@ function Discover() {
                   fill="#202020"
                 />
               </svg>
-            </div>
+            </Link>
 
             <Link
               href={"/linkdonors"}

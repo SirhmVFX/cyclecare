@@ -1,11 +1,41 @@
+"use client";
+
 import Link from "next/link";
 
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "@/app/firebase/config";
+import { useRouter } from "next/navigation";
+
+import { useEffect } from "react";
 function Navigation() {
+  const [user] = useAuthState(auth);
+  const router = useRouter();
+  console.log({ user });
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (!user && !storedUser) {
+      // No user in auth state or local storage, redirect to sign in
+      router.push("/usersignin");
+    }
+  }, [user, router]);
+
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem("user", JSON.stringify(user));
+    }
+  }, [user]);
+
+  // If user is not authenticated, return null (or any other message/component)
+  if (!user) {
+    return;
+  }
   return (
     <>
       <section className="fixed bottom-0 bg-secondary w-full p-8 flex gap-14 justify-center ">
         <Link
-          href={`/`}
+          href={`/discover`}
           className="flex flex-col items-center text-accent text-sm"
         >
           <svg
@@ -27,7 +57,7 @@ function Navigation() {
           Home
         </Link>
         <Link
-          href={`/`}
+          href={`/profile/${user?.email}`}
           className="flex flex-col items-center text-white text-sm"
         >
           <svg
@@ -46,11 +76,11 @@ function Navigation() {
               fill="#FBFBFB"
             />
           </svg>
-          Explore
+          Cycle
         </Link>
 
         <Link
-          href={`/`}
+          href={`/profile/${user?.email}/addproduct`}
           className="flex flex-col items-center text-white text-sm"
         >
           <svg
@@ -72,7 +102,7 @@ function Navigation() {
           Upload
         </Link>
         <Link
-          href={`/profile/account`}
+          href={`/profile/${user?.email}/account`}
           className="flex flex-col items-center text-white text-sm"
         >
           <svg
