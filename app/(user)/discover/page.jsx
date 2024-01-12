@@ -37,7 +37,7 @@ function Discover() {
   return (
     <>
       <section className="w-full md:w-2/4 mx-auto px-8 pt-8 h-screen pb-32">
-        <div className="flex justify-between">
+        <div className="flex justify-between mb-4">
           <div>
             <p className="font-bold text-gray-300 text-sm">Good Morning</p>
             <h1 className="font-bold text-xl text-secondary">{user?.email}</h1>
