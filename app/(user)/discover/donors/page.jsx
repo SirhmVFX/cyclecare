@@ -15,7 +15,7 @@ function Donors() {
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div className="bg-white w-full rounded-ss-3xl rounded-se-3xl px-12 pt-12 h-2/3 absolute bottom-0">
+        <div className="bg-white w-full rounded-ss-3xl rounded-se-3xl px-8 pt-12 h-2/3 absolute bottom-0">
           <div className="flex justify-between">
             <div>
               <h1 className="text-lg font-bold">Discover</h1>
@@ -26,6 +26,15 @@ function Donors() {
               <select name="" id="">
                 <option value="" className="text-sm p-2">
                   lagos
+                </option>
+                <option value="" className="text-sm p-2">
+                  Abuja
+                </option>
+                <option value="" className="text-sm p-2">
+                  Ogun
+                </option>
+                <option value="" className="text-sm p-2">
+                  Ibadan
                 </option>
               </select>
             </div>

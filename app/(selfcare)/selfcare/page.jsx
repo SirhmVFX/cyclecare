@@ -11,7 +11,7 @@ function SelfCare() {
             </h1>
             <p className="mb-8">A healthy mind in a healthy body</p>
             <Link
-              href={"/selfcare"}
+              href={"/selfcare/discover"}
               className=" p-4 w-full rounded-xl text-black flex justify-center bg-white"
             >
               Get Started

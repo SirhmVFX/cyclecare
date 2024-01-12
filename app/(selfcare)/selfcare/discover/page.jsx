@@ -1,3 +1,4 @@
+import Navigation from "@/app/components/Navigation";
 import Image from "next/image";
 function SelfcareDiscover() {
   return (
@@ -49,13 +50,13 @@ function SelfcareDiscover() {
           />
         </div>
 
-        <div className="bg-[#C7E9FF80] flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 ">
+        <div className="bg-[#C7E9FF80] md:flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 ">
           <div className="flex flex-col gap-2 pb-8">
             <div>
               <h1 className="font-bold text-2xl">Warm-Up Exercises</h1>
               <p className="text-[#17A1FA]">Professional Level</p>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className=" lg:flex gap-4 items-center">
               <div className="flex items-center gap-2">
                 <div>
                   <svg
@@ -264,13 +265,13 @@ function SelfcareDiscover() {
           </div>
         </div>
 
-        <div className="bg-[#FAD0D4] flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 ">
+        <div className="bg-[#FAD0D4] md:flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 ">
           <div className="flex flex-col gap-2 pb-8">
             <div>
               <h1 className="font-bold text-2xl">Rillex Strength</h1>
               <p className="text-accent">Intermediate Level</p>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className="lg:flex gap-4 items-center">
               <div className="flex items-center gap-2">
                 <div>
                   <svg
@@ -583,13 +584,13 @@ function SelfcareDiscover() {
           </div>
         </div>
 
-        <div className="bg-[#FFDAC7] flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 ">
+        <div className="bg-[#FFDAC7] md:flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 ">
           <div className="flex flex-col gap-2 pb-8">
             <div>
               <h1 className="font-bold text-2xl">Mindfullness</h1>
               <p className="text-accent">Amateur Level</p>
             </div>
-            <div className="flex gap-4 items-center">
+            <div className="lg:flex gap-4 items-center">
               <div className="flex items-center gap-2">
                 <div>
                   <svg
@@ -835,7 +836,9 @@ function SelfcareDiscover() {
             </svg>
           </div>
         </div>
+        <div className="pb-32">.</div>
       </section>
+      <Navigation />
     </>
   );
 }

@@ -94,7 +94,10 @@ function Discover() {
           </div>
         </div>
 
-        <div className="bg-gray-100 rounded-3xl my-4 h-[219px]">
+        <Link
+          href={"/selfcare"}
+          className="bg-gray-100 rounded-3xl my-4 h-[219px]"
+        >
           <div className="discover p-8 w-full rounded-3xl relative">
             <div className="bg-secondary w-full h-full absolute  left-0 top-0 rounded-3xl opacity-25">
               .
@@ -211,7 +214,7 @@ function Discover() {
               <p>4.0</p>
             </div>
           </div>
-        </div>
+        </Link>
 
         <div>
           <div className="flex justify-between">
@@ -223,7 +226,10 @@ function Discover() {
           </div>
 
           <div>
-            <div className="flex items-center gap-4 py-2">
+            <Link
+              href={"/discover/donors/123"}
+              className="flex items-center gap-4 py-2"
+            >
               <Image
                 src="/images/donor1.png"
                 width={80}
@@ -239,8 +245,11 @@ function Discover() {
                   <p className="text-sm text-gray-300">| Ojodu, Lagos State</p>
                 </div>
               </div>
-            </div>
-            <div className="flex items-center gap-4 py-2">
+            </Link>
+            <Link
+              href={"/discover/donors/123"}
+              className="flex items-center gap-4 py-2"
+            >
               <Image
                 src="/images/donor (1).png"
                 width={80}
@@ -256,8 +265,11 @@ function Discover() {
                   <p className="text-sm text-gray-300">| Ojodu, Lagos State</p>
                 </div>
               </div>
-            </div>
-            <div className="flex items-center gap-4 py-2">
+            </Link>
+            <Link
+              href={"/discover/donors/123"}
+              className="flex items-center gap-4 py-2"
+            >
               <Image
                 src="/images/donor (2).png"
                 width={80}
@@ -273,7 +285,7 @@ function Discover() {
                   <p className="text-sm text-gray-300">| Ojodu, Lagos State</p>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
 
