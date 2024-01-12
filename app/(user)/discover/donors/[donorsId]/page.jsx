@@ -1,7 +1,16 @@
+"use client";
 import Button from "@/app/components/Button";
 import Image from "next/image";
+import Link from "next/link";
+
+import { useRouter } from "next/navigation";
 
 function DonorsId() {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push("/discover/donors/123/message");
+  };
   return (
     <>
       <section className="w-full md:w-2/4 mx-auto h-screen relative">
@@ -21,7 +30,10 @@ function DonorsId() {
             <h1>Donors Details</h1>
 
             <div className="flex gap-2">
-              <div className="bg-red-200 rounded-lg p-2">
+              <Link
+                href={"+2349034980910"}
+                className="bg-red-200 rounded-lg p-2"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -34,8 +46,11 @@ function DonorsId() {
                     fill="#EC4653"
                   />
                 </svg>
-              </div>
-              <div className="bg-red-200 rounded-lg p-2">
+              </Link>
+              <Link
+                href={"/discover/donors/123/message"}
+                className="bg-red-200 rounded-lg p-2"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -52,7 +67,7 @@ function DonorsId() {
                     fill="#EC4653"
                   />
                 </svg>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -147,6 +162,12 @@ function DonorsId() {
               <h1 className="text-gray-300">Location</h1>
               <h1 className="font-bold">Ogba, Lagos</h1>
             </div>
+            <Image
+              src={"/images/prod.jpeg"}
+              width={50}
+              height={50}
+              alt="prod"
+            />
           </div>
 
           <div className="bg-red-100 rounded-2xl p-8 border-spacing-2 border-red-500">
@@ -190,7 +211,11 @@ function DonorsId() {
           </div>
 
           <div className="pt-4 pb-32">
-            <Button label={"Connect"} color={"bg-accent"} />
+            <Button
+              label={"Connect"}
+              color={"bg-accent"}
+              onClick={handleClick}
+            />
           </div>
         </div>
       </section>
