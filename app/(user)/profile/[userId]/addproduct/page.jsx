@@ -159,7 +159,7 @@ function AddProduct() {
               width={100}
               height={100}
               alt="UploadedProduct"
-              className="my-4 rounded-lg object-cover"
+              className="mt-4 rounded-lg object-cover"
             />
           )}
           <div className="mt-8">
