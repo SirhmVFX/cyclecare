@@ -21,7 +21,11 @@ function AddProduct() {
   const [file, setFile] = useState(null); // Change the initial state to null
   const [error, setError] = useState(false);
   const router = useRouter();
-  const [loading, setLoading]
+  const [loading, setLoading] = useState(false);
+
+  const handleLoad = () => {
+    setLoading(!loading);
+  };
 
   useEffect(() => {
     const uploadFile = async () => {
@@ -164,11 +168,14 @@ function AddProduct() {
               className="mt-4 rounded-lg object-cover"
             />
           )}
+
+          {loading ? "Uploading product, please wait ...." : ""}
           <div className="mt-8">
             <Button
               color={error ? "bg-green-600" : "bg-accent"}
               label={error ? "Product Uploaded" : "Upload Product"}
               type="submit"
+              onClick={handleLoad}
             />
           </div>
         </form>
