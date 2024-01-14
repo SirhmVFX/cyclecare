@@ -83,6 +83,7 @@ function AddProduct() {
           timestamp: serverTimestamp(),
         });
         console.log(res);
+        setError(!error);
       } else {
         alert("You need to be signed in to create a product");
         router.push("/usersignin");
@@ -164,17 +165,13 @@ function AddProduct() {
           )}
           <div className="mt-8">
             <Button
-              color={"bg-accent"}
+              color={error ? "bg-gray-300" : "bg-accent"}
               label={"Upload Product"}
               type="submit"
             />
           </div>
         </form>
-        {/* {error ? (
-          <p className="text-red-500 font-bold">
-            There was an error Uploading the product
-          </p>
-        ) : (
+        {error ? (
           <div className="flex items-center gap-2 justify-center py-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +193,9 @@ function AddProduct() {
               Product Uploaded successfull
             </p>
           </div>
-        )} */}
+        ) : (
+          " "
+        )}
       </section>
     </>
   );
