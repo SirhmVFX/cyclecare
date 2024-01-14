@@ -21,6 +21,7 @@ function AddProduct() {
   const [file, setFile] = useState(null); // Change the initial state to null
   const [error, setError] = useState(false);
   const router = useRouter();
+  const [loading, setLoading]
 
   useEffect(() => {
     const uploadFile = async () => {
@@ -165,8 +166,8 @@ function AddProduct() {
           )}
           <div className="mt-8">
             <Button
-              color={error ? "bg-gray-300" : "bg-accent"}
-              label={"Upload Product"}
+              color={error ? "bg-green-600" : "bg-accent"}
+              label={error ? "Product Uploaded" : "Upload Product"}
               type="submit"
             />
           </div>
