@@ -24,7 +24,7 @@ function AddProduct() {
   const [loading, setLoading] = useState(false);
 
   const handleLoad = () => {
-    setLoading(!loading);
+    setLoading(true);
   };
 
   useEffect(() => {
@@ -89,6 +89,7 @@ function AddProduct() {
         });
         console.log(res);
         setError(!error);
+        setLoading(false);
       } else {
         alert("You need to be signed in to create a product");
         router.push("/usersignin");
@@ -148,7 +149,7 @@ function AddProduct() {
             </div>
           </div>
 
-          <div className="mt-5">
+          <div className="mt-5 flex flex-col gap-2 ">
             <label htmlFor="" className="text-sm">
               Add product image *
             </label>
@@ -169,7 +170,7 @@ function AddProduct() {
             />
           )}
 
-          {loading ? "Uploading product, please wait ...." : ""}
+          {loading ? "Uploading product, please wait ...." : "  "}
           <div className="mt-8">
             <Button
               color={error ? "bg-green-600" : "bg-accent"}
