@@ -22,6 +22,7 @@ function AddProduct() {
   const [error, setError] = useState(false);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [uplaoding, setUploading] = useState(false);
 
   const handleLoad = () => {
     setLoading(true);
@@ -90,6 +91,7 @@ function AddProduct() {
         console.log(res);
         setError(!error);
         setLoading(false);
+        setUploading(false);
       } else {
         alert("You need to be signed in to create a product");
         router.push("/usersignin");
@@ -157,7 +159,10 @@ function AddProduct() {
               type="file"
               name=""
               id=""
-              onChange={(e) => setFile(e.target.files[0])}
+              onChange={(e) => {
+                setFile(e.target.files[0]);
+                setLoading(true);
+              }}
             />
           </div>
           {file && (
