@@ -277,107 +277,47 @@ function Discover() {
           </div>
         </div>
 
-        {/* <div className="pt-4 pb-32">
+        <div className="pt-4 pb-32">
           <h1 className="font-bold">Top Products</h1>
 
           <div className="flex gap-4">
-            <div className="bg-white shadow-lg p-4 w-1/3 rounded-2xl ">
-              <Image
-                src="/images/prod.jpeg"
-                width={80}
-                height={80}
-                alt="prod"
-              />
-              <h1 className="text-sm font-bold">Whisper Sanitary Pad</h1>
-              <div className="flex relative">
+            {data.slice(0, 2).map((prodd) => (
+              <div className="bg-white shadow-lg p-4 w-1/2 rounded-2xl ">
                 <Image
-                  src="/images/people.png"
-                  width={35}
-                  height={35}
-                  className="rounded-full border-2 border-white "
+                  src={prodd.file.stringValue}
+                  width={50}
+                  height={50}
+                  alt="prod"
                 />
-                <Image
-                  src="/images/people (1).png"
-                  width={35}
-                  height={35}
-                  className="rounded-full border-2 border-white absolute left-5"
-                />
-                <Image
-                  src="/images/people (2).png"
-                  width={35}
-                  height={35}
-                  className="rounded-full border-2 border-white absolute left-10"
-                />
+                <h1 className="text-sm font-bold">
+                  {prodd.productName.stringValue}
+                </h1>
+                <div className="flex relative">
+                  <Image
+                    src="/images/people.png"
+                    width={35}
+                    height={35}
+                    className="rounded-full border-2 border-white "
+                  />
+                  <Image
+                    src="/images/people (1).png"
+                    width={35}
+                    height={35}
+                    className="rounded-full border-2 border-white absolute left-5"
+                  />
+                  <Image
+                    src="/images/people (2).png"
+                    width={35}
+                    height={35}
+                    className="rounded-full border-2 border-white absolute left-10"
+                  />
+                </div>
+
+                <p className="text-sm text-gray-300">24 items left</p>
               </div>
-
-              <p className="text-sm text-gray-300">24 items left</p>
-            </div>
-
-            <div className="bg-white shadow-lg p-4 w-1/3 rounded-2xl ">
-              <Image
-                src="/images/prod.jpeg"
-                width={80}
-                height={80}
-                alt="prod"
-              />
-              <h1 className="text-sm font-bold">Whisper Sanitary Pad</h1>
-              <div className="flex relative">
-                <Image
-                  src="/images/people.png"
-                  width={35}
-                  height={35}
-                  className="rounded-full border-2 border-white "
-                />
-                <Image
-                  src="/images/people (1).png"
-                  width={35}
-                  height={35}
-                  className="rounded-full border-2 border-white absolute left-5"
-                />
-                <Image
-                  src="/images/people (2).png"
-                  width={35}
-                  height={35}
-                  className="rounded-full border-2 border-white absolute left-10"
-                />
-              </div>
-
-              <p className="text-sm text-gray-300">24 items left</p>
-            </div>
-
-            <div className="bg-white shadow-lg p-4 w-1/3 rounded-2xl ">
-              <Image
-                src="/images/prod.jpeg"
-                width={80}
-                height={80}
-                alt="prod"
-              />
-              <h1 className="text-sm font-bold">Whisper Sanitary Pad</h1>
-              <div className="flex relative">
-                <Image
-                  src="/images/people.png"
-                  width={35}
-                  height={35}
-                  className="rounded-full border-2 border-white "
-                />
-                <Image
-                  src="/images/people (1).png"
-                  width={35}
-                  height={35}
-                  className="rounded-full border-2 border-white absolute left-5"
-                />
-                <Image
-                  src="/images/people (2).png"
-                  width={35}
-                  height={35}
-                  className="rounded-full border-2 border-white absolute left-10"
-                />
-              </div>
-
-              <p className="text-sm text-gray-300">24 items left</p>
-            </div>
+            ))}
           </div>
-        </div> */}
+        </div>
       </section>
     </>
   );
