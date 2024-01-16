@@ -268,7 +268,7 @@ function Discover() {
                       {prod.donorname.stringValue}
                     </p>
                     <p className="text-sm text-gray-300">
-                      | Ojodu, Lagos State
+                      | {prod.location.stringValue}
                     </p>
                   </div>
                 </div>
