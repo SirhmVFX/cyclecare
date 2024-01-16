@@ -15,6 +15,7 @@ import { useRouter } from "next/navigation";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 function AddProduct() {
+  const [donorname, setDonorName] = useState("");
   const [productName, setProductname] = useState("");
   const [quantity, setQuantity] = useState("");
   const [location, setLocation] = useState("");
@@ -22,6 +23,7 @@ function AddProduct() {
   const [error, setError] = useState(false);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+  const [perc, setPerc] = useState(null);
 
   const handleLoad = () => {
     setLoading(true);
@@ -41,6 +43,7 @@ function AddProduct() {
             const progress =
               (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             console.log("Upload is " + progress + "% done");
+            setPerc(progress);
             switch (snapshot.state) {
               case "paused":
                 console.log("Upload is paused");
@@ -81,6 +84,7 @@ function AddProduct() {
         const { uid } = user;
         const res = await addDoc(collection(db, "products"), {
           productName,
+          donorname,
           quantity,
           location,
           file,
@@ -101,9 +105,23 @@ function AddProduct() {
 
   return (
     <>
-      <section className="p-8 w-full md:w-2/4 mx-auto">
+      <section className="p-8 w-full md:w-2/4 mx-auto mb-36">
         <h1>Upload Product</h1>
         <form onSubmit={handleAdd}>
+          <div className="mt-5">
+            <label htmlFor="" className="text-sm">
+              Your Name *
+            </label>
+
+            <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
+              <input
+                type="text"
+                placeholder="Enter your name"
+                className="bg-transparent w-full text-sm outline-none"
+                onChange={(e) => setDonorName(e.target.value)}
+              />
+            </div>
+          </div>
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
               Product Name *
@@ -172,12 +190,22 @@ function AddProduct() {
 
           {loading ? "Uploading product, please wait ...." : "  "}
           <div className="mt-8">
-            <Button
+            <button
+              className={`button ${error ? "bg-green-600" : "bg-accent"}`}
+              type="submit"
+              onClick={handleLoad}
+              disabled={perc !== null && perc < 100}
+            >
+              {error ? "Product Uploaded" : "Upload Product"}
+            </button>
+
+            {/* <Button
               color={error ? "bg-green-600" : "bg-accent"}
               label={error ? "Product Uploaded" : "Upload Product"}
               type="submit"
               onClick={handleLoad}
-            />
+              disabled={"per !== null && < 100"}
+            /> */}
           </div>
         </form>
         {error ? (
