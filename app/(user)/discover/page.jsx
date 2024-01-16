@@ -255,15 +255,15 @@ function Discover() {
               >
                 <Image
                   src={prod.file.stringValue}
-                  width={80}
-                  height={80}
+                  width={60}
+                  height={60}
                   alt="donor"
                   className="rounded-3xl"
                 />
 
                 <div>
                   <h1 className="font-bold">{prod.productName.stringValue}</h1>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 flex-wrap">
                     <p className="text-sm text-accent font-bold">
                       {prod.donorname.stringValue}
                     </p>
