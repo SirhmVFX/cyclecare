@@ -1,4 +1,5 @@
 import Button from "@/app/components/Button";
+import Link from "next/link";
 function CycleCompleted() {
   return (
     <>
@@ -90,8 +91,10 @@ function CycleCompleted() {
         </svg>
 
         <p className="text-white font-bold">Yayy! you did it</p>
-        <div className="mt-8 w-full p-8">
-          <Button color={"bg-secondary"} label={"Back to Home"} />
+        <div className="mt-8 flex w-full p-8 ">
+          <Link href={"../track"} className="button bg-secondary ">
+            Back to Cycle
+          </Link>
         </div>
       </section>
     </>

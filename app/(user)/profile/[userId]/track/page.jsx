@@ -2,7 +2,7 @@ import Button from "@/app/components/Button";
 import Image from "next/image";
 import Link from "next/link";
 
-function TrackCycle() {
+function TrackCycle({ params }) {
   return (
     <>
       <section className="bg-secondary relative w-full h-screen ">
@@ -261,11 +261,10 @@ function TrackCycle() {
           </div>
 
           <div className="mt-6 flex flex-col items-center">
-            <Button label={"Completed"} color={"bg-accent"} />
-            <Link
-              href={"/profile/user/doctorappoitment"}
-              className="text-sm text-accent"
-            >
+            <Link href={"./track/success"} className="button bg-accent">
+              Completed
+            </Link>
+            <Link href={"./doctorappointment"} className="text-sm text-accent">
               Not Observing? Schedule a doctors appointment
             </Link>
           </div>
