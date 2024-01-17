@@ -134,30 +134,35 @@ function Discover() {
                 src="/images/people.png"
                 width={35}
                 height={35}
+                alt="img"
                 className="rounded-full border-2 border-white "
               />
               <Image
                 src="/images/people (1).png"
                 width={35}
                 height={35}
+                alt="img"
                 className="rounded-full border-2 border-white absolute left-5"
               />
               <Image
                 src="/images/people (2).png"
                 width={35}
                 height={35}
+                alt="img"
                 className="rounded-full border-2 border-white absolute left-10"
               />
               <Image
                 src="/images/people (3).png"
                 width={35}
                 height={35}
+                alt="img"
                 className="rounded-full border-2 border-white absolute left-16"
               />
               <Image
                 src="/images/people (4).png"
                 width={35}
                 height={35}
+                alt="img"
                 className="rounded-full border-2 border-white absolute left-20"
               />
             </div>
@@ -250,6 +255,7 @@ function Discover() {
           <div>
             {data.slice(-4).map((prod) => (
               <Link
+                key={prod.id}
                 href={"/discover/donors/123"}
                 className="flex items-center gap-4 py-2"
               >
@@ -282,7 +288,10 @@ function Discover() {
 
           <div className="flex gap-4">
             {data.slice(0, 2).map((prodd) => (
-              <div className="bg-white shadow-lg p-4 w-1/2 rounded-2xl ">
+              <div
+                key={prodd.id}
+                className="bg-white shadow-lg p-4 w-1/2 rounded-2xl "
+              >
                 <Image
                   src={prodd.file.stringValue}
                   width={100}
@@ -298,18 +307,21 @@ function Discover() {
                     src="/images/people.png"
                     width={35}
                     height={35}
+                    alt="prod"
                     className="rounded-full border-2 border-white "
                   />
                   <Image
                     src="/images/people (1).png"
                     width={35}
                     height={35}
+                    alt="prod"
                     className="rounded-full border-2 border-white absolute left-5"
                   />
                   <Image
                     src="/images/people (2).png"
                     width={35}
                     height={35}
+                    alt="prod"
                     className="rounded-full border-2 border-white absolute left-10"
                   />
                 </div>

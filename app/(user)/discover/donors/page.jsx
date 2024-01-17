@@ -95,6 +95,7 @@ function Donors() {
           <div>
             {data.map((prod) => (
               <Link
+                key={prod.id}
                 href={`/discover/donors/${prod.id}`}
                 className="flex items-center gap-4 py-2"
               >

@@ -32,7 +32,7 @@ function DonorsId({ params }) {
       }
     };
     fetchData();
-  }, []);
+  }, [id]);
 
   const router = useRouter();
 

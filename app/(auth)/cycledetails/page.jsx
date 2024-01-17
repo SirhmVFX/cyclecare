@@ -43,7 +43,7 @@ function CycleDetails() {
 
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
-              3. How long does your cycle last 'Days'
+              3. How long does your cycle last Days
             </label>
 
             <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
