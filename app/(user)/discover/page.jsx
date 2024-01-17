@@ -248,7 +248,7 @@ function Discover() {
           </div>
 
           <div>
-            {data.map((prod) => (
+            {data.slice(-4).map((prod) => (
               <Link
                 href={"/discover/donors/123"}
                 className="flex items-center gap-4 py-2"

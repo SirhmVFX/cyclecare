@@ -1,6 +1,59 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "@/app/firebase/config";
+import { useRouter } from "next/navigation";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/app/firebase/config";
+import { useEffect, useState } from "react";
+
 function Donors() {
+  const [user] = useAuthState(auth);
+  const [data, setData] = useState([]);
+  const router = useRouter();
+  console.log({ user });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      let list = [];
+      try {
+        const querySnapshot = await getDocs(collection(db, "products"));
+        querySnapshot.forEach((doc) => {
+          list.push({
+            id: doc.id,
+            ...doc._document.data.value.mapValue.fields,
+          });
+        });
+        setData(list);
+        console.log("list =", list);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (!user && !storedUser) {
+      // No user in auth state or local storage, redirect to sign in
+      router.push("/usersignin");
+    }
+  }, [user, router]);
+
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem("user", JSON.stringify(user));
+    }
+  }, [user]);
+
+  // If user is not authenticated, return null (or any other message/component)
+  if (!user) {
+    return;
+  }
   return (
     <>
       <section className="w-full md:w-2/4 mx-auto h-screen relative">
@@ -40,80 +93,32 @@ function Donors() {
             </div>
           </div>
           <div>
-            <Link href={`/discover/donors/123`}>
-              <div className="flex items-center gap-4 py-2">
+            {data.map((prod) => (
+              <Link
+                href={"/discover/donors/123"}
+                className="flex items-center gap-4 py-2"
+              >
                 <Image
-                  src="/images/donor1.png"
-                  width={80}
-                  height={80}
+                  src={prod.file.stringValue}
+                  width={60}
+                  height={60}
                   alt="donor"
                   className="rounded-3xl"
                 />
 
                 <div>
-                  <h1 className="font-bold">Darlene Robertson</h1>
-                  <div className="flex gap-2">
+                  <h1 className="font-bold">{prod.productName.stringValue}</h1>
+                  <div className="flex gap-2 flex-wrap">
                     <p className="text-sm text-accent font-bold">
-                      Sanitary Pads
+                      {prod.donorname.stringValue}
                     </p>
                     <p className="text-sm text-gray-300">
-                      | Ojodu, Lagos State
+                      | {prod.location.stringValue}
                     </p>
                   </div>
                 </div>
-              </div>
-            </Link>
-            <div className="flex items-center gap-4 py-2">
-              <Image
-                src="/images/donor (1).png"
-                width={80}
-                height={80}
-                alt="donor"
-                className="rounded-3xl"
-              />
-
-              <div>
-                <h1 className="font-bold">Theresa Webb</h1>
-                <div className="flex gap-2">
-                  <p className="text-sm text-accent font-bold">Toiletries</p>
-                  <p className="text-sm text-gray-300">| Ojodu, Lagos State</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 py-2">
-              <Image
-                src="/images/donor (2).png"
-                width={80}
-                height={80}
-                alt="donor"
-                className="rounded-3xl"
-              />
-
-              <div>
-                <h1 className="font-bold">Wade Warren</h1>
-                <div className="flex gap-2">
-                  <p className="text-sm text-accent font-bold">Sanitary Pads</p>
-                  <p className="text-sm text-gray-300">| Ojodu, Lagos State</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 pt-2 pb-32 ">
-              <Image
-                src="/images/donor (2).png"
-                width={80}
-                height={80}
-                alt="donor"
-                className="rounded-3xl"
-              />
-
-              <div>
-                <h1 className="font-bold">Wade Warren</h1>
-                <div className="flex gap-2">
-                  <p className="text-sm text-accent font-bold">Sanitary Pads</p>
-                  <p className="text-sm text-gray-300">| Ojodu, Lagos State</p>
-                </div>
-              </div>
-            </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
