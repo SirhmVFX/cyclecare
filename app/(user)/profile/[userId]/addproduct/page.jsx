@@ -19,6 +19,7 @@ function AddProduct() {
   const [productName, setProductname] = useState("");
   const [quantity, setQuantity] = useState("");
   const [location, setLocation] = useState("");
+  const [phone, setPhone] = useState("");
   const [file, setFile] = useState(null); // Change the initial state to null
   const [error, setError] = useState(false);
   const router = useRouter();
@@ -87,6 +88,7 @@ function AddProduct() {
           donorname,
           quantity,
           location,
+          phone,
           file,
           userid: uid,
           timestamp: serverTimestamp(),
@@ -106,11 +108,11 @@ function AddProduct() {
   return (
     <>
       <section className="p-8 w-full md:w-2/4 mx-auto mb-36">
-        <h1>Upload Product</h1>
+        <h1 className="text-2xl font-bold">Upload Product</h1>
         <form onSubmit={handleAdd}>
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
-              Your Name *
+              Your FullName *
             </label>
 
             <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
@@ -124,7 +126,7 @@ function AddProduct() {
           </div>
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
-              Product Name *
+              Full Product Name *
             </label>
 
             <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
@@ -154,7 +156,7 @@ function AddProduct() {
 
           <div className="mt-5">
             <label htmlFor="" className="text-sm">
-              Location *
+              Your Precise Location *
             </label>
 
             <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
@@ -163,6 +165,21 @@ function AddProduct() {
                 placeholder="What is your location"
                 className="bg-transparent w-full text-sm outline-none"
                 onChange={(e) => setLocation(e.target.value)}
+              />
+            </div>
+          </div>
+
+          <div className="mt-5">
+            <label htmlFor="" className="text-sm">
+              Phone Number *
+            </label>
+
+            <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
+              <input
+                type="tel"
+                placeholder="Enter your phone number"
+                className="bg-transparent w-full text-sm outline-none"
+                onChange={(e) => setPhone(e.target.value)}
               />
             </div>
           </div>
