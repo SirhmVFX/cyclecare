@@ -4,8 +4,36 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useRouter } from "next/navigation";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "@/app/firebase/config";
+import { useEffect, useState } from "react";
 
-function DonorsId() {
+function DonorsId({ params }) {
+  const id = params.donorsId;
+  const [donordetails, setdonorDetails] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      let data = [];
+      try {
+        const docRef = doc(db, "products", id);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          data = docSnap.data();
+          console.log("Document data:", docSnap.data());
+        } else {
+          // docSnap.data() will be undefined in this case
+          console.log("No such document!");
+        }
+        setdonorDetails(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+
   const router = useRouter();
 
   const handleClick = () => {
@@ -82,24 +110,26 @@ function DonorsId() {
               />
 
               <div>
-                <h1 className="font-bold">Ganiu Samuel</h1>
-                <p className="text-gray-300">+234 329 109 2334</p>
+                <h1 className="font-bold">{donordetails.donorname}</h1>
+                <p className="text-gray-300">{donordetails.phone}</p>
               </div>
             </div>
 
             <div className="flex gap-2 items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="17"
-                viewBox="0 0 18 17"
-                fill="none"
-              >
-                <path
-                  d="M7.57341 1.39058C8.02244 0.00861168 9.97756 0.00860953 10.4266 1.39058L11.3574 4.25532C11.5582 4.87336 12.1341 5.2918 12.784 5.2918H15.7962C17.2492 5.2918 17.8534 7.15122 16.6778 8.00532L14.2409 9.77583C13.7152 10.1578 13.4952 10.8348 13.696 11.4529L14.6268 14.3176C15.0759 15.6996 13.4941 16.8488 12.3186 15.9947L9.88168 14.2242C9.35595 13.8422 8.64405 13.8422 8.11832 14.2242L5.68143 15.9947C4.50586 16.8488 2.92413 15.6996 3.37316 14.3176L4.30397 11.4529C4.50479 10.8348 4.2848 10.1578 3.75907 9.77583L1.32217 8.00532C0.1466 7.15122 0.750763 5.2918 2.20385 5.2918H5.21602C5.86586 5.2918 6.44179 4.87336 6.6426 4.25532L7.57341 1.39058Z"
-                  fill="#29D395"
-                />
-              </svg>
+              <Link href={`tel:+${donordetails.phone}`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="17"
+                  viewBox="0 0 18 17"
+                  fill="none"
+                >
+                  <path
+                    d="M7.57341 1.39058C8.02244 0.00861168 9.97756 0.00860953 10.4266 1.39058L11.3574 4.25532C11.5582 4.87336 12.1341 5.2918 12.784 5.2918H15.7962C17.2492 5.2918 17.8534 7.15122 16.6778 8.00532L14.2409 9.77583C13.7152 10.1578 13.4952 10.8348 13.696 11.4529L14.6268 14.3176C15.0759 15.6996 13.4941 16.8488 12.3186 15.9947L9.88168 14.2242C9.35595 13.8422 8.64405 13.8422 8.11832 14.2242L5.68143 15.9947C4.50586 16.8488 2.92413 15.6996 3.37316 14.3176L4.30397 11.4529C4.50479 10.8348 4.2848 10.1578 3.75907 9.77583L1.32217 8.00532C0.1466 7.15122 0.750763 5.2918 2.20385 5.2918H5.21602C5.86586 5.2918 6.44179 4.87336 6.6426 4.25532L7.57341 1.39058Z"
+                    fill="#29D395"
+                  />
+                </svg>
+              </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -155,12 +185,12 @@ function DonorsId() {
           <div className="py-12 flex flex-col gap-4">
             <div className="flex justify-between">
               <h1 className="text-gray-300">Donation</h1>
-              <h1 className="font-bold">Toileteries</h1>
+              <h1 className="font-bold">{donordetails.productName}</h1>
             </div>
 
             <div className="flex justify-between">
               <h1 className="text-gray-300">Location</h1>
-              <h1 className="font-bold">Ogba, Lagos</h1>
+              <h1 className="font-bold">{donordetails.location}</h1>
             </div>
             <Image
               src={"/images/prod.jpeg"}
@@ -175,7 +205,7 @@ function DonorsId() {
               <div className="bg-red-200 w-[20px] h-[20px] rounded-full flex items-center justify-center">
                 <div className="bg-red-500 w-[10px] h-[10px] rounded-full"></div>
               </div>
-              <p className="font-bold text-sm">St. James Area</p>
+              <p className="font-bold text-sm">Your Location</p>
             </div>
             <div>
               <div>
@@ -205,7 +235,7 @@ function DonorsId() {
                     />
                   </svg>
                 </div>
-                <p className="font-sm font-bold">Ogba, Lagos</p>
+                <p className="font-sm font-bold">{donordetails.location}</p>
               </div>
             </div>
           </div>

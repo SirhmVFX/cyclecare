@@ -95,7 +95,7 @@ function Donors() {
           <div>
             {data.map((prod) => (
               <Link
-                href={"/discover/donors/123"}
+                href={`/discover/donors/${prod.id}`}
                 className="flex items-center gap-4 py-2"
               >
                 <Image
