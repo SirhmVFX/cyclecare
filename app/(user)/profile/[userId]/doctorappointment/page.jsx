@@ -4,7 +4,7 @@ function DoctorAppointment() {
   return (
     <>
       <section className="p-8 w-full md:w-2/4 mx-auto">
-        <h1 className="font-bold">Upload Product</h1>
+        <h1 className="font-bold text-2xl">Schedule a doctors appointment</h1>
         <p>
           Tell us a little about what’s wrong and how you are feeling, let’s
           schedule an appointment with a doctor for you
