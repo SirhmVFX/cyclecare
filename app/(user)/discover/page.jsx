@@ -278,16 +278,17 @@ function Discover() {
         </div>
 
         <div className="pt-4 pb-32">
-          <h1 className="font-bold">Top Products</h1>
+          <h1 className="font-bold">Available Products</h1>
 
           <div className="flex gap-4">
             {data.slice(0, 2).map((prodd) => (
               <div className="bg-white shadow-lg p-4 w-1/2 rounded-2xl ">
                 <Image
                   src={prodd.file.stringValue}
-                  width={50}
-                  height={50}
+                  width={100}
+                  height={100}
                   alt="prod"
+                  className="h-[100px] object-contain"
                 />
                 <h1 className="text-sm font-bold">
                   {prodd.productName.stringValue}
@@ -313,7 +314,9 @@ function Discover() {
                   />
                 </div>
 
-                <p className="text-sm text-gray-300">24 items left</p>
+                <p className="text-sm text-gray-300">
+                  {prodd.quantity.stringValue} items left
+                </p>
               </div>
             ))}
           </div>
