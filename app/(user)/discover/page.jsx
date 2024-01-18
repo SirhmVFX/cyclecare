@@ -327,7 +327,7 @@ function Discover() {
                 </div>
 
                 <p className="text-sm text-gray-300">
-                  {prodd.quantity.stringValue} items left
+                  {prodd.quantity.stringValue} items left.
                 </p>
               </div>
             ))}
