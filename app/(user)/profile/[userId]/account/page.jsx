@@ -1,8 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import profile from "@/public/images/user_placeholder.png";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "@/app/firebase/config";
 
 function Account() {
+  const [user] = useAuthState(auth);
   return (
     <>
       <section className="w-full md:w-2/4 mx-auto bg-secondary h-screen flex items-end">
@@ -18,7 +23,7 @@ function Account() {
               />
             </div>
 
-            <h1 className="text-2xl font-bold">Moyosore Ayomide</h1>
+            <h1 className="text-2xl font-bold">{user?.email}</h1>
             <p className="text-camera text-accent">Edit Profile</p>
           </div>
 
