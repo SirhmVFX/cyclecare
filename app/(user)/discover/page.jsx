@@ -10,6 +10,8 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/app/firebase/config";
 import { useEffect, useState } from "react";
 
+import img1 from "@/public/images/user_placeholder.png";
+
 function Discover() {
   const [user] = useAuthState(auth);
   const [data, setData] = useState([]);

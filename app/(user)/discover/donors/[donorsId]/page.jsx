@@ -8,6 +8,8 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "@/app/firebase/config";
 import { useEffect, useState } from "react";
 
+import profile from "@/public/images/user_placeholder.png";
+
 function DonorsId({ params }) {
   const id = params.donorsId;
   const [donordetails, setdonorDetails] = useState("");
@@ -101,13 +103,15 @@ function DonorsId({ params }) {
 
           <div className="">
             <div className="flex gap-4 items-center py-4">
-              <Image
-                src="/images/donor1.png"
-                width={60}
-                height={60}
-                alt="donor"
-                className="rounded-3xl"
-              />
+              <div className="rounded-lg border-4 border-white ">
+                <Image
+                  src={profile}
+                  alt="profile"
+                  height={50}
+                  width={50}
+                  className="object-cover rounded-lg"
+                />
+              </div>
 
               <div>
                 <h1 className="font-bold">{donordetails.donorname}</h1>
