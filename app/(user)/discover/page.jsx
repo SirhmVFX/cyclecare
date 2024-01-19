@@ -256,7 +256,7 @@ function Discover() {
             {data.slice(-4).map((prod) => (
               <Link
                 key={prod.id}
-                href={"/discover/donors/123"}
+                href={`/discover/donors/${prod.id}`}
                 className="flex items-center gap-4 py-2"
               >
                 <Image

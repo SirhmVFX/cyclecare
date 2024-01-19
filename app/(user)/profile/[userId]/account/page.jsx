@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import profile from "@/public/images/user_placeholder.png";
 
 function Account() {
   return (
@@ -7,13 +8,15 @@ function Account() {
       <section className="w-full md:w-2/4 mx-auto bg-secondary h-screen flex items-end">
         <div className="bg-white w-full h-3/4 p-12 relative rounded-s-2xl rounded-e-2xl">
           <div className="absolute -top-10 w-3/4 mx-auto flex flex-col items-center">
-            <Image
-              src="/images/profile.png"
-              alt="profile"
-              height={130}
-              width={130}
-              className="rounded-full border-4 border-white"
-            />
+            <div className="rounded-full border-4 border-white ">
+              <Image
+                src={profile}
+                alt="profile"
+                height={90}
+                width={90}
+                className="object-cover rounded-full"
+              />
+            </div>
 
             <h1 className="text-2xl font-bold">Moyosore Ayomide</h1>
             <p className="text-camera text-accent">Edit Profile</p>
