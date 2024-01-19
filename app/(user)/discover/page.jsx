@@ -10,7 +10,12 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/app/firebase/config";
 import { useEffect, useState } from "react";
 
-import img1 from "@/public/images/user_placeholder.png";
+import img1 from "@/public/images/people.png";
+import img2 from "@/public/images/people (1).png";
+import img3 from "@/public/images/people (2).png";
+import img4 from "@/public/images/people (3).png";
+import img5 from "@/public/images/people (4).png";
+import img6 from "@/public/images/donor (1).png";
 
 function Discover() {
   const [user] = useAuthState(auth);
@@ -133,35 +138,35 @@ function Discover() {
 
             <div className="flex relative">
               <Image
-                src="/images/people.png"
+                src={img1}
                 width={35}
                 height={35}
                 alt="img"
                 className="rounded-full border-2 border-white "
               />
               <Image
-                src="/images/people (1).png"
+                src={img2}
                 width={35}
                 height={35}
                 alt="img"
                 className="rounded-full border-2 border-white absolute left-5"
               />
               <Image
-                src="/images/people (2).png"
+                src={img3}
                 width={35}
                 height={35}
                 alt="img"
                 className="rounded-full border-2 border-white absolute left-10"
               />
               <Image
-                src="/images/people (3).png"
+                src={img4}
                 width={35}
                 height={35}
                 alt="img"
                 className="rounded-full border-2 border-white absolute left-16"
               />
               <Image
-                src="/images/people (4).png"
+                src={img5}
                 width={35}
                 height={35}
                 alt="img"
@@ -310,21 +315,21 @@ function Discover() {
                 </h1>
                 <div className="flex relative">
                   <Image
-                    src="/images/people.png"
+                    src={img4}
                     width={35}
                     height={35}
                     alt="prod"
                     className="rounded-full border-2 border-white "
                   />
                   <Image
-                    src="/images/people (1).png"
+                    src={img3}
                     width={35}
                     height={35}
                     alt="prod"
                     className="rounded-full border-2 border-white absolute left-5"
                   />
                   <Image
-                    src="/images/people (2).png"
+                    src={img6}
                     width={35}
                     height={35}
                     alt="prod"
