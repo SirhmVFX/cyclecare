@@ -56,7 +56,7 @@ function Donors() {
   }
   return (
     <>
-      <section className="w-full md:w-2/4 mx-auto h-screen relative mb-20">
+      <section className="w-full md:w-2/4 mx-auto h-screen relative">
         <div className="w-full h-[300px]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126834.05801193304!2d3.3488896!3d6.5765376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sen!2sng!4v1704388854964!5m2!1sen!2sng"
@@ -99,13 +99,15 @@ function Donors() {
                 href={`/discover/donors/${prod.id}`}
                 className="flex items-center gap-4 py-2"
               >
-                <Image
-                  src={prod.file.stringValue}
-                  width={60}
-                  height={60}
-                  alt="donor"
-                  className="rounded-3xl"
-                />
+                <div className="w-[60px] h-[60px]">
+                  <Image
+                    src={prod.file.stringValue}
+                    width={60}
+                    height={60}
+                    alt="donor"
+                    className="rounded-lg w-full h-full object-cover"
+                  />
+                </div>
 
                 <div>
                   <h1 className="font-bold">{prod.productName.stringValue}</h1>
@@ -120,6 +122,7 @@ function Donors() {
                 </div>
               </Link>
             ))}
+            <div className="mb-36">.</div>
           </div>
         </div>
       </section>

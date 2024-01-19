@@ -197,9 +197,9 @@ function DonorsId({ params }) {
               <h1 className="font-bold">{donordetails.location}</h1>
             </div>
             <Image
-              src={"/images/prod.jpeg"}
-              width={50}
-              height={50}
+              src={donordetails.file}
+              width={100}
+              height={100}
               alt="prod"
             />
           </div>

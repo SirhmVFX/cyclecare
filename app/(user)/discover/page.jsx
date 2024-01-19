@@ -261,13 +261,15 @@ function Discover() {
                 href={`/discover/donors/${prod.id}`}
                 className="flex items-center gap-4 py-2"
               >
-                <Image
-                  src={prod.file.stringValue}
-                  width={60}
-                  height={60}
-                  alt="donor"
-                  className="rounded-3xl"
-                />
+                <div className="w-[60px] h-[60px]">
+                  <Image
+                    src={prod.file.stringValue}
+                    width={60}
+                    height={60}
+                    alt="donor"
+                    className="rounded-lg object-cover w-full h-full"
+                  />
+                </div>
 
                 <div>
                   <h1 className="font-bold">{prod.productName.stringValue}</h1>
@@ -294,13 +296,15 @@ function Discover() {
                 key={prodd.id}
                 className="bg-white shadow-lg p-4 w-1/2 rounded-2xl "
               >
-                <Image
-                  src={prodd.file.stringValue}
-                  width={100}
-                  height={100}
-                  alt="prod"
-                  className="h-[100px] object-contain"
-                />
+                <div className="w-[60px] h-[60px]">
+                  <Image
+                    src={prodd.file.stringValue}
+                    width={100}
+                    height={100}
+                    alt="prod"
+                    className=" object-cover w-full h-full"
+                  />
+                </div>
                 <h1 className="text-sm font-bold">
                   {prodd.productName.stringValue}
                 </h1>
