@@ -70,8 +70,72 @@ function Insights() {
           </div>
         </div>
 
-        <div className="bg-white w-full md:w-2/4 h-3/4 rounded-s-3xl rounded-e-3xl mx-auto absolute bottom-0">
-          hy
+        <div className="bg-white w-full md:w-2/4 h-3/4 p-8 rounded-s-3xl rounded-e-3xl mx-auto absolute bottom-0">
+          <div className="flex justify-between">
+            <h1>Cycle insights</h1>
+            <h1>2024</h1>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <div className="w-[20px] h-[20px] bg-accent rounded-full"></div>
+            <h1>Periods</h1>
+          </div>
+
+          <div className="mt-4 flex justify-center">
+            <h1>December</h1>
+          </div>
+
+          <div className="flex justify-between">
+            <h1>Mon</h1>
+            <h1>Tue</h1>
+            <h1>Wed</h1>
+            <h1>Thu</h1>
+            <h1>Fri</h1>
+            <h1>Sat</h1>
+            <h1>Sun</h1>
+          </div>
+          <div className="flex justify-between">
+            <h1 className="text-gray-400">1</h1>
+            <h1 className="text-gray-400">2</h1>
+            <h1 className="text-gray-400">3</h1>
+            <h1 className="text-gray-400">4</h1>
+            <h1 className="text-gray-400">5</h1>
+            <h1 className="text-gray-400">6</h1>
+            <h1 className="text-gray-400">7</h1>
+          </div>
+          <div className="flex justify-between">
+            <h1 className="text-gray-400">8</h1>
+            <h1 className="text-gray-400">9</h1>
+            <h1 className="text-gray-400">10</h1>
+            <h1 className="text-gray-400">11</h1>
+            <h1 className="text-gray-400">12</h1>
+            <h1 className="text-gray-400">13</h1>
+            <h1 className="text-gray-400">14</h1>
+          </div>
+          <div className="flex justify-between">
+            <h1 className="text-gray-400">15</h1>
+            <h1 className="text-gray-400">16</h1>
+            <h1 className="text-gray-400">17</h1>
+            <h1 className="text-gray-400">18</h1>
+            <h1 className="text-gray-400">19</h1>
+            <h1 className="text-gray-400">20</h1>
+            <h1 className="text-gray-400">21</h1>
+          </div>
+          <div className="flex justify-between">
+            <h1 className="text-gray-400">22</h1>
+            <h1 className="text-gray-400">23</h1>
+            <h1 className="text-gray-400">24</h1>
+            <h1 className="text-gray-400">25</h1>
+            <h1 className="text-gray-400">26</h1>
+            <h1 className="text-gray-400">27</h1>
+            <h1 className="text-gray-400">28</h1>
+          </div>
+
+          <div className="flex justify-end gap-10">
+            <h1 className="text-gray-400">29</h1>
+            <h1 className="text-gray-400">30</h1>
+            <h1 className="text-gray-400">31</h1>
+          </div>
         </div>
       </section>
     </>
