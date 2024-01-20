@@ -1,5 +1,6 @@
 import ChatBubble from "@/app/components/ChatBubble";
 import ChatBubbleReceive from "@/app/components/ChatBubbleReceive";
+import profile from "@/public/images/user_placeholder.png";
 import Image from "next/image";
 
 function Message() {
@@ -9,7 +10,7 @@ function Message() {
         <div className="flex justify-between">
           <div className="flex justify-center items-center gap-3">
             <Image
-              src="/images/user.png"
+              src={profile}
               width={40}
               height={40}
               alt="user"
@@ -37,7 +38,7 @@ function Message() {
 
         <div className="py-4 h-[85%]">
           <ul>
-            <li className="flex justify-end">
+            <li className="flex justify-end ">
               <ChatBubble />
             </li>
             <li>
