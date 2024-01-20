@@ -68,7 +68,7 @@ function AccountType() {
             As a User
           </Link>
 
-          <button>
+          <Link href={"/v2"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="60"
@@ -102,7 +102,7 @@ function AccountType() {
               />
             </svg>
             As a Donor
-          </button>
+          </Link>
         </div>
       </section>
     </>
