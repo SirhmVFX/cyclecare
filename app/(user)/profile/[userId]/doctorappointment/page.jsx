@@ -4,7 +4,7 @@ import Link from "next/link";
 function DoctorAppointment() {
   return (
     <>
-      <section className="p-8 w-full md:w-2/4 mx-auto">
+      <section className="p-8 w-full md:w-2/4 mx-auto mb-36">
         <h1 className="font-bold text-2xl">Schedule a doctors appointment</h1>
         <p>
           Tell us a little about what’s wrong and how you are feeling, let’s
