@@ -38,36 +38,36 @@ function TrackCycle({ params }) {
         </div>
 
         <div className="px-12 pb-8">
-          <h1 className="font-bold text-white text-lg">21 Jan, 2024</h1>
+          <h1 className="font-bold text-white text-lg">22 Jan, 2024</h1>
 
           <div className="flex justify-between">
             <div className="flex flex-col justify-center">
               <p className="text-sm text-accent">Mo</p>
-              <h1 className="font-bold text-white text-lg">21</h1>
-            </div>
-            <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">Tu</p>
               <h1 className="font-bold text-white text-lg">22</h1>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">We</p>
+              <p className="text-sm text-accent">Tu</p>
               <h1 className="font-bold text-white text-lg">23</h1>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">Th</p>
+              <p className="text-sm text-accent">We</p>
               <h1 className="font-bold text-white text-lg">24</h1>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">Fr</p>
+              <p className="text-sm text-accent">Th</p>
               <h1 className="font-bold text-white text-lg">25</h1>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">Sa</p>
+              <p className="text-sm text-accent">Fr</p>
               <h1 className="font-bold text-white text-lg">26</h1>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">Su</p>
+              <p className="text-sm text-accent">Sa</p>
               <h1 className="font-bold text-white text-lg">27</h1>
+            </div>
+            <div className="flex flex-col justify-center">
+              <p className="text-sm text-accent">Su</p>
+              <h1 className="font-bold text-white text-lg">28</h1>
             </div>
           </div>
         </div>
@@ -183,24 +183,6 @@ function TrackCycle({ params }) {
 
               <div>
                 <h1 className="font-bold text-base">Day 1, Monday</h1>
-                <p className="text-sm">Obeserving, 21st January, 2024</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-8 mb-3">
-            <input type="checkbox" name="" id="" />
-
-            <div className="bg-white shadow-lg p-6 rounded-2xl flex gap-3 w-full">
-              <Image
-                src="/images/check.png"
-                width={50}
-                height={30}
-                alt="check"
-              />
-
-              <div>
-                <h1 className="font-bold text-base">Day 2, Tueday</h1>
                 <p className="text-sm">Obeserving, 22nd January, 2024</p>
               </div>
             </div>
@@ -218,7 +200,7 @@ function TrackCycle({ params }) {
               />
 
               <div>
-                <h1 className="font-bold text-base">Day 3, Wednessday</h1>
+                <h1 className="font-bold text-base">Day 2, Tueday</h1>
                 <p className="text-sm">Obeserving, 23rd January, 2024</p>
               </div>
             </div>
@@ -236,7 +218,7 @@ function TrackCycle({ params }) {
               />
 
               <div>
-                <h1 className="font-bold text-base">Day 4, Thursday</h1>
+                <h1 className="font-bold text-base">Day 3, Wednessday</h1>
                 <p className="text-sm">Obeserving, 24th January, 2024</p>
               </div>
             </div>
@@ -254,8 +236,26 @@ function TrackCycle({ params }) {
               />
 
               <div>
-                <h1 className="font-bold text-base">Day 5, Friday</h1>
+                <h1 className="font-bold text-base">Day 4, Thursday</h1>
                 <p className="text-sm">Obeserving, 25th January, 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-8 mb-3">
+            <input type="checkbox" name="" id="" />
+
+            <div className="bg-white shadow-lg p-6 rounded-2xl flex gap-3 w-full">
+              <Image
+                src="/images/check.png"
+                width={50}
+                height={30}
+                alt="check"
+              />
+
+              <div>
+                <h1 className="font-bold text-base">Day 5, Friday</h1>
+                <p className="text-sm">Obeserving, 26th January, 2024</p>
               </div>
             </div>
           </div>
