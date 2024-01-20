@@ -1,5 +1,6 @@
 "use client";
 import Navigation from "@/app/components/Navigation";
+import Link from "next/link";
 import Image from "next/image";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "@/app/firebase/config";

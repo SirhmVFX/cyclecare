@@ -131,7 +131,7 @@ function Insights() {
             <h1 className="text-gray-400">28</h1>
           </div>
 
-          <div className="flex justify-end gap-10">
+          <div className="flex justify-start gap-10">
             <h1 className="text-gray-400">29</h1>
             <h1 className="text-gray-400">30</h1>
             <h1 className="text-gray-400">31</h1>
