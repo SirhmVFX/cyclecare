@@ -1,4 +1,5 @@
 import Image from "next/image";
+import profile from "@/public/images/user_placeholder.png";
 
 function Insights() {
   return (
@@ -26,7 +27,7 @@ function Insights() {
 
           <div>
             <Image
-              src="/images/user.png"
+              src={profile}
               width={40}
               height={40}
               alt="user"
