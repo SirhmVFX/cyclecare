@@ -1,17 +1,22 @@
+"use client";
 import Navigation from "@/app/components/Navigation";
 import Image from "next/image";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "@/app/firebase/config";
+import profile from "@/public/images/user_placeholder.png";
 function SelfcareDiscover() {
+  const [user] = useAuthState(auth);
   return (
     <>
       <section className="w-full md:w-2/4 h-screen mx-auto p-8">
         <div className="flex justify-between">
           <div>
-            <p className="font-bold text-gray-300">Good Morning</p>
-            <h1 className="font-bold text-2xl text-secondary">Ayomide</h1>
+            <p className="font-bold text-gray-300">Good day</p>
+            <h1 className="font-bold text-2xl text-secondary">{user?.email}</h1>
           </div>
 
           <Image
-            src="/images/profile.png"
+            src={profile}
             alt="profile"
             width={50}
             height={50}
@@ -50,7 +55,10 @@ function SelfcareDiscover() {
           />
         </div>
 
-        <div className="bg-[#C7E9FF80] md:flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 ">
+        <Link
+          href={"/v2"}
+          className="bg-[#C7E9FF80] md:flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 "
+        >
           <div className="flex flex-col gap-2 pb-8">
             <div>
               <h1 className="font-bold text-2xl">Warm-Up Exercises</h1>
@@ -263,9 +271,12 @@ function SelfcareDiscover() {
               </defs>
             </svg>
           </div>
-        </div>
+        </Link>
 
-        <div className="bg-[#FAD0D4] md:flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 ">
+        <Link
+          href={"/v2"}
+          className="bg-[#FAD0D4] md:flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 "
+        >
           <div className="flex flex-col gap-2 pb-8">
             <div>
               <h1 className="font-bold text-2xl">Rillex Strength</h1>
@@ -582,9 +593,12 @@ function SelfcareDiscover() {
               </defs>
             </svg>
           </div>
-        </div>
+        </Link>
 
-        <div className="bg-[#FFDAC7] md:flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 ">
+        <Link
+          href={"/v2"}
+          className="bg-[#FFDAC7] md:flex pt-14 justify-between ps-12 pe-12 rounded-2xl mb-6 "
+        >
           <div className="flex flex-col gap-2 pb-8">
             <div>
               <h1 className="font-bold text-2xl">Mindfullness</h1>
@@ -835,7 +849,7 @@ function SelfcareDiscover() {
               </defs>
             </svg>
           </div>
-        </div>
+        </Link>
         <div className="pb-32">.</div>
       </section>
       <Navigation />

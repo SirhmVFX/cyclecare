@@ -1,4 +1,4 @@
-import Toast from "@/app/components/Toast";
+import profile from "@/public/images/user_placeholder.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -31,7 +31,7 @@ function Userprofile({ params }) {
             </svg>
           </div>
           <Image
-            src="/images/profile.png"
+            src={profile}
             alt="profile"
             width={50}
             height={50}
@@ -40,8 +40,8 @@ function Userprofile({ params }) {
         </div>
 
         <div className="py-4">
-          <h1 className="font-bold text-3xl text-secondary">Welcome, {user}</h1>
-          <p className="text-sm text-accent">Wednessday, 28 Dec 2023</p>
+          <h1 className="font-bold text-lg text-secondary">Welcome, {user}</h1>
+          <p className="text-sm text-accent">Good day</p>
         </div>
 
         <div className="grid grid-cols-2 gap-4">

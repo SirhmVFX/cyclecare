@@ -1,4 +1,4 @@
-import Button from "@/app/components/Button";
+import profile from "@/public/images/user_placeholder.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -28,7 +28,7 @@ function TrackCycle({ params }) {
 
           <div>
             <Image
-              src="/images/user.png"
+              src={profile}
               width={40}
               height={40}
               alt="user"

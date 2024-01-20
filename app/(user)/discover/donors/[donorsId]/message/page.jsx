@@ -1,9 +1,37 @@
+"use client";
 import ChatBubble from "@/app/components/ChatBubble";
 import ChatBubbleReceive from "@/app/components/ChatBubbleReceive";
 import profile from "@/public/images/user_placeholder.png";
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "@/app/firebase/config";
 
-function Message() {
+function Message({ params }) {
+  const id = params.donorsId;
+  const [donordetails, setdonorDetails] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      let data = [];
+      try {
+        const docRef = doc(db, "products", id);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          data = docSnap.data();
+          console.log("Document data:", docSnap.data());
+        } else {
+          // docSnap.data() will be undefined in this case
+          console.log("No such document!");
+        }
+        setdonorDetails(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, [id]);
   return (
     <>
       <section className="w-full md:w-2/4 mx-auto p-8 h-screen">
@@ -17,7 +45,7 @@ function Message() {
               className="border rounded-full border-rose-600"
             />
 
-            <p className="font-bold">Ganiu Samuel</p>
+            <p className="font-bold">{donordetails.donorname}</p>
           </div>
 
           <div className="bg-red-100 p-2 rounded-lg">

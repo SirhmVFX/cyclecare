@@ -1,9 +1,11 @@
 "use client";
-import ChatBubble from "@/app/components/ChatBubble";
-import ChatBubbleReceive from "@/app/components/ChatBubbleReceive";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "@/app/firebase/config";
 import { useChat } from "ai/react";
+import Link from "next/link";
 
 function Message() {
+  const [user] = useAuthState(auth);
   const { input, handleInputChange, handleSubmit, isLoading, messages } =
     useChat();
 
@@ -21,8 +23,20 @@ function Message() {
         </div>
 
         <div className="py-4 h-[70%]">
-          <ChatBubble />
-          <ChatBubbleReceive />
+          <div className="mb-4">
+            <p className="font-bold">You</p>
+            <div className="bg-accent py-2 px-4 rounded-2xl rounded-ee-none ">
+              <p className="text-sm text-white">Hy </p>
+            </div>
+          </div>
+          <div className="mb-8">
+            <p className="font-bold">Cyclevcare AI Assitant</p>
+            <div className="bg-gray-200 py-2 px-4 rounded-lg w-3/4 ">
+              <p className="text-sm text-gray-400">
+                Hello {user?.email}, How may i be of help to you today
+              </p>
+            </div>
+          </div>
         </div>
 
         <label htmlFor="">Ask any question</label>
@@ -32,14 +46,16 @@ function Message() {
               type="text"
               name=""
               value={input}
-              onChange={handleInputChange}
               placeholder="Enter message"
               className="border p-2 rounded-2xl w-3/4"
             />
 
-            <button className="bg-accent py-2 px-3 text-white rounded-2xl">
+            <Link
+              href={"/v2"}
+              className="bg-accent py-2 px-3 text-white rounded-2xl"
+            >
               Send
-            </button>
+            </Link>
           </form>
         </div>
       </section>

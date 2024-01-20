@@ -10,7 +10,7 @@ function ResetPassword() {
           <p>Please enter your OTP and your new password</p>
         </div>
 
-        <form>
+        <form className="">
           <div>
             <label htmlFor="" className="text-sm" aria-required>
               Enter the OTP Sent to your email *
@@ -78,7 +78,7 @@ function ResetPassword() {
               />
             </div>
           </div>
-          <div className="mt-5">
+          <div className="mt-5 w-full">
             <label htmlFor="" className="text-sm">
               Confirm New Password *
             </label>
@@ -111,8 +111,10 @@ function ResetPassword() {
               />
             </div>
           </div>
-          <div className="mt-8">
-            <Button color={"bg-accent"} label={"Reset Password"} />
+          <div className="mt-8 w-full flex items-center">
+            <Link href={"/v2"} className="button bg-accent">
+              Reset Password
+            </Link>
           </div>
         </form>
 

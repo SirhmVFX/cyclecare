@@ -39,7 +39,7 @@ function DonorsId({ params }) {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("/discover/donors/123/message");
+    router.push(`/discover/donors/${id}/message`);
   };
   return (
     <>

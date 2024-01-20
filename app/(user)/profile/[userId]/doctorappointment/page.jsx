@@ -1,4 +1,5 @@
 import Button from "@/app/components/Button";
+import Link from "next/link";
 
 function DoctorAppointment() {
   return (
@@ -37,8 +38,10 @@ function DoctorAppointment() {
               className="w-full p-4 bg-gray-300 rounded-2xl"
             ></textarea>
           </div>
-          <div className="mt-8">
-            <Button color={"bg-secondary"} label={"Schedule Appointment"} />
+          <div className="mt-8 w-full flex">
+            <Link href={"/v2"} className="button bg-secondary">
+              Schedule Appointment
+            </Link>
           </div>
         </form>
       </section>

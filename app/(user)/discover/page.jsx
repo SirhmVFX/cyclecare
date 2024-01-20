@@ -11,11 +11,6 @@ import { db } from "@/app/firebase/config";
 import { useEffect, useState } from "react";
 
 import img1 from "@/public/images/people.png";
-import img2 from "@/public/images/people (1).png";
-import img3 from "@/public/images/people (2).png";
-import img4 from "@/public/images/people (3).png";
-import img5 from "@/public/images/people (4).png";
-import img6 from "@/public/images/donor (1).png";
 
 function Discover() {
   const [user] = useAuthState(auth);
@@ -68,15 +63,12 @@ function Discover() {
       <section className="w-full md:w-2/4 mx-auto px-8 pt-8 h-screen pb-32">
         <div className="flex justify-between mb-4">
           <div>
-            <p className="font-bold text-gray-300 text-sm">Good Morning</p>
+            <p className="font-bold text-gray-300 text-sm">Good day</p>
             <h1 className="font-bold text-xl text-secondary">{user?.email}</h1>
           </div>
 
           <div className="flex gap-2 items-center">
-            <Link
-              href={"/notifications"}
-              className="bg-white rounded-2xl shadow-lg p-3"
-            >
+            <Link href={"/v2"} className="bg-white rounded-2xl shadow-lg p-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -145,28 +137,28 @@ function Discover() {
                 className="rounded-full border-2 border-white "
               />
               <Image
-                src={img2}
+                src={img1}
                 width={35}
                 height={35}
                 alt="img"
                 className="rounded-full border-2 border-white absolute left-5"
               />
               <Image
-                src={img3}
+                src={img1}
                 width={35}
                 height={35}
                 alt="img"
                 className="rounded-full border-2 border-white absolute left-10"
               />
               <Image
-                src={img4}
+                src={img1}
                 width={35}
                 height={35}
                 alt="img"
                 className="rounded-full border-2 border-white absolute left-16"
               />
               <Image
-                src={img5}
+                src={img1}
                 width={35}
                 height={35}
                 alt="img"
@@ -315,21 +307,21 @@ function Discover() {
                 </h1>
                 <div className="flex relative">
                   <Image
-                    src={img4}
+                    src={img1}
                     width={35}
                     height={35}
                     alt="prod"
                     className="rounded-full border-2 border-white "
                   />
                   <Image
-                    src={img3}
+                    src={img1}
                     width={35}
                     height={35}
                     alt="prod"
                     className="rounded-full border-2 border-white absolute left-5"
                   />
                   <Image
-                    src={img6}
+                    src={img1}
                     width={35}
                     height={35}
                     alt="prod"
