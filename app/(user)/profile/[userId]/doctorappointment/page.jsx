@@ -19,7 +19,7 @@ function DoctorAppointment() {
             <div className="bg-gray-200 flex p-4 rounded-2xl items-center gap-2 mt-2">
               <input
                 type="text"
-                placeholder="Enter your product name"
+                placeholder="Enter your fullname"
                 className="bg-transparent w-full text-sm"
               />
             </div>

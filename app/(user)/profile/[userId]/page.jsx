@@ -1,9 +1,13 @@
+"use client";
 import profile from "@/public/images/user_placeholder.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "@/app/firebase/config";
 
 function Userprofile({ params }) {
   const user = params.userId;
+  const [useri] = useAuthState(auth);
   return (
     <>
       <section className="w-full md:w-2/4 mx-auto p-8 bg-[#F8F8F8] pb-32">
@@ -40,7 +44,9 @@ function Userprofile({ params }) {
         </div>
 
         <div className="py-4">
-          <h1 className="font-bold text-lg text-secondary">Welcome, {user}</h1>
+          <h1 className="font-bold text-lg text-secondary">
+            Welcome, {useri?.email}
+          </h1>
           <p className="text-sm text-accent">Good day</p>
         </div>
 
