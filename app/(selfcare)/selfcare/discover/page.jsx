@@ -13,7 +13,9 @@ function SelfcareDiscover() {
         <div className="flex justify-between">
           <div>
             <p className="font-bold text-gray-300">Good day</p>
-            <h1 className="font-bold text-2xl text-secondary">{user?.email}</h1>
+            <h1 className="font-bold text-2xl text-secondary">
+              {user?.email.split("@")[0]}
+            </h1>
           </div>
 
           <Image
