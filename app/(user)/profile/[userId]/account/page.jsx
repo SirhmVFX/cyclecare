@@ -23,7 +23,7 @@ function Account() {
               />
             </div>
 
-            <h1 className="text-2xl font-bold">{user?.email}</h1>
+            <h1 className="text-2xl font-bold">{user?.email.split("@")[0]}</h1>
             <p className="text-camera text-accent">Edit Profile</p>
           </div>
 
