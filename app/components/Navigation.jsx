@@ -57,7 +57,7 @@ function Navigation() {
           Home
         </Link>
         <Link
-          href={`/profile/${user?.email}`}
+          href={`/profile/${user?.email.split("@")[0]}`}
           className="flex flex-col items-center text-white text-sm"
         >
           <svg
