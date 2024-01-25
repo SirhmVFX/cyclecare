@@ -102,7 +102,7 @@ function Navigation() {
           Upload
         </Link>
         <Link
-          href={`/profile/${user?.email}/account`}
+          href={`/profile/${user?.email.split("@")[0]}/account`}
           className="flex flex-col items-center text-white text-sm"
         >
           <svg
