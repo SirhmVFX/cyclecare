@@ -72,7 +72,7 @@ function Userprofile({ params }) {
             <div className="p-8">
               <div>
                 <h1 className="text-base text-white">Next Cycle</h1>
-                <p className="text-sm text-accent">21 Jan, 2023</p>
+                <p className="text-sm text-accent">22 Jan, 2023</p>
               </div>
               <div className="flex justify-end">
                 <Image

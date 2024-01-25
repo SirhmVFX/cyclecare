@@ -64,7 +64,9 @@ function Discover() {
         <div className="flex justify-between mb-4">
           <div>
             <p className="font-bold text-gray-300 text-sm">Good day</p>
-            <h1 className="font-bold text-xl text-secondary">{user?.email}</h1>
+            <h1 className="font-bold text-xl text-secondary">
+              {user?.email.split("@")[0]}
+            </h1>
           </div>
 
           <div className="flex gap-2 items-center">
