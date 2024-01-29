@@ -17,7 +17,7 @@ function Message() {
           <div className="flex justify-center items-center gap-3">
             <p className="font-bold text-2xl">
               Cycle Care <br />
-              Ai Assitant
+              AI Assitant
             </p>
           </div>
         </div>
@@ -30,7 +30,7 @@ function Message() {
             </div>
           </div>
           <div className="mb-8">
-            <p className="font-bold">Cyclevcare AI Assitant</p>
+            <p className="font-bold">CycleCare AI Assitant</p>
             <div className="bg-gray-200 py-2 px-4 rounded-lg w-3/4 ">
               <p className="text-sm text-gray-400">
                 Hello {user?.email.split("@")[0]}, How may i be of help to you
