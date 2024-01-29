@@ -4,7 +4,7 @@ import Button from "./components/Button";
 function NotFound() {
   return (
     <>
-      <section className="w-full h-screen bg-secondary flex items-center ">
+      <section className="w-full h-screen bg-[#EC4653] flex items-center ">
         <div className="w-full md:w-2/4 flex flex-col gap-8 justify-center items-center mx-auto">
           <Image
             src="/images/error.png"
@@ -21,7 +21,7 @@ function NotFound() {
           </div>
 
           <div className="mt-8 w-full flex justify-center">
-            <Button label={"Back to home"} color={"bg-accent"} />
+            <Button label={"Back to home"} color={"bg-secondary"} />
           </div>
         </div>
       </section>
