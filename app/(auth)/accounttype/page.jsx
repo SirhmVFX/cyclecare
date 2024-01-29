@@ -4,7 +4,7 @@ import Link from "next/link";
 function AccountType() {
   return (
     <>
-      <section className="bg-secondary w-full h-screen relative flex justify-center items-start">
+      <section className="bg-[#EC4653] w-full h-screen relative flex justify-center items-start">
         <Link
           className="bg-white rounded-full absolute left-12 top-12"
           href="/splash1"
@@ -28,7 +28,7 @@ function AccountType() {
         </Link>
 
         <Image
-          src="/images/cyclecarelogo2.png"
+          src="/images/cyclecarelogo22.png"
           alt="logo"
           width={200}
           height={200}
