@@ -4,7 +4,7 @@ import profile from "@/public/images/user_placeholder.png";
 function Insights() {
   return (
     <>
-      <section className="bg-secondary relative w-full h-screen ">
+      <section className="bg-accent relative w-full h-screen ">
         <div className="w-full md:w-2/4 mx-auto">
           <div className="flex justify-between p-8 ">
             <div className="p-3 bg-white rounded-xl">
@@ -67,7 +67,7 @@ function Insights() {
 
             <div>
               <h1 className="text-white text-sm">Cycle Insights</h1>
-              <p className="text-accent text-sm">See your cycle progress</p>
+              <p className="text-secondary text-sm">See your cycle progress</p>
             </div>
           </div>
 
@@ -78,7 +78,7 @@ function Insights() {
             </div>
 
             <div className="flex items-center gap-2 w-full">
-              <div className="w-[20px] h-[20px] bg-accent rounded-full"></div>
+              <div className="w-[20px] h-[20px] bg-secondary rounded-full"></div>
               <h1>Periods</h1>
             </div>
 
