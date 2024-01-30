@@ -33,7 +33,7 @@ function Navigation() {
   }
   return (
     <>
-      <section className="fixed bottom-0 bg-secondary w-full p-8 flex gap-14 justify-center ">
+      <section className="fixed bottom-0 bg-accent w-full p-8 flex gap-14 justify-center ">
         <Link
           href={`/discover`}
           className="flex flex-col items-center text-white text-sm"
