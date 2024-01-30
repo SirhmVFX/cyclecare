@@ -27,7 +27,7 @@ function UserSignUp() {
       setEmail("");
       setPassword("");
 
-      alert("User Created Successfully, Proceed to Sign Up");
+      alert("User Created Successfully, Proceed to Sign In");
       router.push("/usersignin");
     } catch (error) {
       console.log(error);
