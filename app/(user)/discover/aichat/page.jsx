@@ -26,7 +26,7 @@ function Message() {
           <div className="mb-4">
             <p className="font-bold">You</p>
             <div className="bg-accent py-2 px-4 rounded-2xl rounded-ee-none ">
-              <p className="text-sm text-white">Hy </p>
+              <p className="text-sm text-white">Hi </p>
             </div>
           </div>
           <div className="mb-8">
