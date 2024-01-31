@@ -10,7 +10,7 @@ function Account() {
   const [user] = useAuthState(auth);
   return (
     <>
-      <section className="w-full md:w-2/4 mx-auto bg-secondary h-screen flex items-end">
+      <section className="w-full md:w-2/4 mx-auto bg-accent h-screen flex items-end">
         <div className="bg-white w-full h-3/4 p-12 relative rounded-s-2xl rounded-e-2xl">
           <div className="absolute -top-10 w-3/4 mx-auto flex flex-col items-center">
             <div className="rounded-full border-4 border-white ">
