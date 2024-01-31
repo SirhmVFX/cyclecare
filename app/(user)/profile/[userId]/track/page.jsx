@@ -5,7 +5,7 @@ import Link from "next/link";
 function TrackCycle({ params }) {
   return (
     <>
-      <section className="bg-secondary relative w-full h-screen ">
+      <section className="bg-accent relative w-full h-screen ">
         <div className="flex justify-between px-8 py-4">
           <div className="p-3 bg-white rounded-xl">
             <svg
@@ -42,31 +42,31 @@ function TrackCycle({ params }) {
 
           <div className="flex justify-between">
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">Mo</p>
+              <p className="text-sm text-secondary">Mo</p>
               <h1 className="font-bold text-white text-lg">22</h1>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">Tu</p>
+              <p className="text-sm text-secondary">Tu</p>
               <h1 className="font-bold text-white text-lg">23</h1>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">We</p>
+              <p className="text-sm text-secondary">We</p>
               <h1 className="font-bold text-white text-lg">24</h1>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">Th</p>
+              <p className="text-sm text-secondary">Th</p>
               <h1 className="font-bold text-white text-lg">25</h1>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">Fr</p>
+              <p className="text-sm text-secondary">Fr</p>
               <h1 className="font-bold text-white text-lg">26</h1>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">Sa</p>
+              <p className="text-sm text-secondary">Sa</p>
               <h1 className="font-bold text-white text-lg">27</h1>
             </div>
             <div className="flex flex-col justify-center">
-              <p className="text-sm text-accent">Su</p>
+              <p className="text-sm text-secondary">Su</p>
               <h1 className="font-bold text-white text-lg">28</h1>
             </div>
           </div>
@@ -261,10 +261,13 @@ function TrackCycle({ params }) {
           </div>
 
           <div className="mt-6 flex flex-col items-center">
-            <Link href={"./track/success"} className="button bg-accent">
+            <Link href={"./track/success"} className="button bg-secondary">
               Completed
             </Link>
-            <Link href={"./doctorappointment"} className="text-sm text-accent">
+            <Link
+              href={"./doctorappointment"}
+              className="text-sm text-secondary"
+            >
               Not Observing? Schedule a doctors appointment
             </Link>
           </div>
